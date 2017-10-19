@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="YesNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txk-dE-f5n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="8eW-bO-Cmf"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-wq-hcL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UND-OZ-yBR">
+                                <rect key="frame" x="149.5" y="20" width="76" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZAy-1q-UjU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="  Chord ▾">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="chordPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EJp-0d-YJO"/>
+                                    <segue destination="Ytd-Xp-mCf" kind="popoverPresentation" identifier="chordPopUp" popoverAnchorView="UND-OZ-yBR" id="fmu-a3-G4J">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGA-Io-KJ3">
+                                <rect key="frame" x="141.5" y="607" width="92" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="31a-1a-fbH"/>
+                                    <constraint firstAttribute="width" constant="92" id="R4B-S5-EPj"/>
+                                </constraints>
+                                <state key="normal" image="playPause"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FGA-Io-KJ3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B2V-Lj-Xh0"/>
+                            <constraint firstItem="txk-dE-f5n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kwu-l0-fbS"/>
+                            <constraint firstAttribute="trailing" secondItem="txk-dE-f5n" secondAttribute="trailing" id="LN2-d8-3ur"/>
+                            <constraint firstItem="UND-OZ-yBR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XtQ-oQ-yBZ"/>
+                            <constraint firstItem="txk-dE-f5n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dSc-nc-r6z"/>
+                            <constraint firstItem="UND-OZ-yBR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fKl-q2-2rE"/>
+                            <constraint firstItem="txk-dE-f5n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jWN-qe-0VA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FGA-Io-KJ3" secondAttribute="bottom" constant="10" id="wuf-v6-0Uz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chordButton" destination="UND-OZ-yBR" id="hyA-Lr-lV8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263.19999999999999" y="100.29985007496252"/>
+        </scene>
+        <!--Chord Select View Controller-->
+        <scene sceneID="RZ7-IV-iO4">
+            <objects>
+                <viewController id="Ytd-Xp-mCf" customClass="ChordSelectViewController" customModule="YesNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="beE-uW-Y8n"/>
+                        <viewControllerLayoutGuide type="bottom" id="ky7-zd-0m2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="JmU-Up-h3J">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvf-gs-KDn">
+                                <rect key="frame" x="0.0" y="300" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kvf-gs-KDn" secondAttribute="height" multiplier="7:1" id="CpM-sU-hRs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="Ytd-Xp-mCf" eventType="touchUpInside" id="ShM-9t-F16"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smF-EQ-yDf">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="smF-EQ-yDf" secondAttribute="height" multiplier="7:1" constant="-70" id="j3Q-QH-9eo"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="0.000">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <pickerView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-dF-sTG">
+                                <rect key="frame" x="0.0" y="40" width="350" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hvx-dF-sTG" secondAttribute="height" multiplier="7:5" constant="-14" id="XwD-WF-kyR"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hvx-dF-sTG" firstAttribute="leading" secondItem="JmU-Up-h3J" secondAttribute="leading" id="B2W-Cc-WIe"/>
+                            <constraint firstItem="Kvf-gs-KDn" firstAttribute="leading" secondItem="JmU-Up-h3J" secondAttribute="leading" id="JxO-63-qCj"/>
+                            <constraint firstItem="smF-EQ-yDf" firstAttribute="leading" secondItem="JmU-Up-h3J" secondAttribute="leading" id="N8t-aj-ZpU"/>
+                            <constraint firstItem="ky7-zd-0m2" firstAttribute="top" secondItem="Kvf-gs-KDn" secondAttribute="bottom" id="OHS-Zq-XJe"/>
+                            <constraint firstAttribute="trailing" secondItem="Kvf-gs-KDn" secondAttribute="trailing" id="aAT-Ci-pT2"/>
+                            <constraint firstItem="Kvf-gs-KDn" firstAttribute="top" secondItem="hvx-dF-sTG" secondAttribute="bottom" id="bcG-7I-c11"/>
+                            <constraint firstItem="smF-EQ-yDf" firstAttribute="top" secondItem="beE-uW-Y8n" secondAttribute="bottom" id="cWY-Pg-V0P"/>
+                            <constraint firstAttribute="trailing" secondItem="hvx-dF-sTG" secondAttribute="trailing" id="l4G-9O-m85"/>
+                            <constraint firstItem="Kvf-gs-KDn" firstAttribute="top" secondItem="hvx-dF-sTG" secondAttribute="bottom" id="me4-6z-oHX"/>
+                            <constraint firstAttribute="trailing" secondItem="smF-EQ-yDf" secondAttribute="trailing" id="uIy-7f-7cP"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="350" height="350"/>
+                    <connections>
+                        <outlet property="picker" destination="hvx-dF-sTG" id="7RD-XD-Kc3"/>
+                        <outlet property="selectionLabel" destination="smF-EQ-yDf" id="IoG-u2-iNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tcO-7K-bvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636.79999999999995" y="99.850074962518747"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playPause" width="370" height="200"/>
+    </resources>
+</document>
