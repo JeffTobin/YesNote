@@ -13,6 +13,11 @@
 		179296971DF0EA3E00273528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179296961DF0EA3E00273528 /* Assets.xcassets */; };
 		1792969A1DF0EA3E00273528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179296981DF0EA3E00273528 /* LaunchScreen.storyboard */; };
 		3F7A893E1F910F8B00E6AF2E /* ChordSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */; };
+		3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */; };
+		3FC674541F99614600E2A352 /* RhythmsDownStem.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */; };
+		3FC674551F99614600E2A352 /* STAFCP__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 3FC674501F99614600E2A352 /* STAFCP__.TTF */; };
+		3FC674561F99614600E2A352 /* STAFCPE_.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 3FC674511F99614600E2A352 /* STAFCPE_.TTF */; };
+		3FC674571F99614600E2A352 /* Rhyth.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC674521F99614600E2A352 /* Rhyth.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		179296991DF0EA3E00273528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1792969B1DF0EA3E00273528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordSelectViewController.swift; sourceTree = "<group>"; };
+		3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StaffClefPitchesEasy.suit; sourceTree = "<group>"; };
+		3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhythmsDownStem.otf; sourceTree = "<group>"; };
+		3FC674501F99614600E2A352 /* STAFCP__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STAFCP__.TTF; sourceTree = "<group>"; };
+		3FC674511F99614600E2A352 /* STAFCPE_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STAFCPE_.TTF; sourceTree = "<group>"; };
+		3FC674521F99614600E2A352 /* Rhyth.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyth.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +70,24 @@
 				179296911DF0EA3E00273528 /* MainViewController.swift */,
 				3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */,
 				179296931DF0EA3E00273528 /* Main.storyboard */,
+				3FC6744D1F99614600E2A352 /* fonts */,
 				179296961DF0EA3E00273528 /* Assets.xcassets */,
 				179296981DF0EA3E00273528 /* LaunchScreen.storyboard */,
 				1792969B1DF0EA3E00273528 /* Info.plist */,
 			);
 			path = YesNote;
+			sourceTree = "<group>";
+		};
+		3FC6744D1F99614600E2A352 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */,
+				3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */,
+				3FC674501F99614600E2A352 /* STAFCP__.TTF */,
+				3FC674511F99614600E2A352 /* STAFCPE_.TTF */,
+				3FC674521F99614600E2A352 /* Rhyth.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +151,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */,
+				3FC674551F99614600E2A352 /* STAFCP__.TTF in Resources */,
+				3FC674561F99614600E2A352 /* STAFCPE_.TTF in Resources */,
+				3FC674541F99614600E2A352 /* RhythmsDownStem.otf in Resources */,
 				1792969A1DF0EA3E00273528 /* LaunchScreen.storyboard in Resources */,
 				179296971DF0EA3E00273528 /* Assets.xcassets in Resources */,
 				179296951DF0EA3E00273528 /* Main.storyboard in Resources */,
+				3FC674571F99614600E2A352 /* Rhyth.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

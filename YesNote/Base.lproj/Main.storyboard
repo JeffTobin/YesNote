@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
+        <array key="STAFCPE_.TTF">
+            <string>StaffClefPitchesEasy</string>
         </array>
     </customFonts>
     <scenes>
@@ -52,7 +52,7 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-bC-pm8">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-bC-pm8">
                                                 <rect key="frame" x="0.0" y="198" width="375" height="176"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -69,22 +69,28 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQV-vV-Bqt">
-                                                <rect key="frame" x="20" y="74" width="338" height="99"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp;=a=s=d=f=g=h=j=q=||" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQV-vV-Bqt">
+                                                <rect key="frame" x="10" y="40" width="355" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="3jd-4H-1la"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="355" id="ULV-wI-KLN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="StaffClefPitchesEasy" family="StaffClefPitchesEasy" pointSize="38"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="e8E-bC-pm8" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" id="9v1-J1-5rj"/>
+                                            <constraint firstItem="nQV-vV-Bqt" firstAttribute="top" secondItem="rhM-iB-uZu" secondAttribute="top" constant="40" id="Ab7-IY-Iqk"/>
                                             <constraint firstItem="gPf-aw-ZWW" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" constant="20" id="IM6-K3-ST7"/>
+                                            <constraint firstAttribute="trailing" secondItem="nQV-vV-Bqt" secondAttribute="trailing" constant="10" id="J4F-5Z-z2W"/>
                                             <constraint firstItem="gPf-aw-ZWW" firstAttribute="top" secondItem="rhM-iB-uZu" secondAttribute="top" constant="20" id="bXF-Au-VzH"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gPf-aw-ZWW" secondAttribute="trailing" constant="20" symbolic="YES" id="dbJ-Ea-reZ"/>
                                             <constraint firstAttribute="trailing" secondItem="e8E-bC-pm8" secondAttribute="trailing" id="foq-6y-fje"/>
-                                            <constraint firstItem="e8E-bC-pm8" firstAttribute="centerY" secondItem="rhM-iB-uZu" secondAttribute="centerY" constant="-67.5" id="kHr-vf-1yU"/>
+                                            <constraint firstItem="e8E-bC-pm8" firstAttribute="centerY" secondItem="rhM-iB-uZu" secondAttribute="centerY" constant="-15.5" id="kHr-vf-1yU"/>
+                                            <constraint firstItem="nQV-vV-Bqt" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" constant="10" id="yAU-Gg-kON"/>
                                         </constraints>
                                     </view>
                                 </subviews>
