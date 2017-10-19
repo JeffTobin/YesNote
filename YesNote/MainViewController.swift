@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var DroneTableView: UITableView!
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 11
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,6 +59,9 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 //----------------------------------------------------------------------------------------------------------
 // Overriden Functions
 //----------------------------------------------------------------------------------------------------------
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -73,6 +76,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         DroneTableView.dataSource = self
         DroneTableView.backgroundColor = UIColor.clear
         DroneTableView.alwaysBounceVertical = false;
+        DroneTableView.isScrollEnabled = false;
         
         DispatchQueue.main.async {
             //This code will run in the main thread:
@@ -80,6 +84,13 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             frame.size.height = self.DroneTableView.contentSize.height;
             self.DroneTableView.frame = frame;
             };
+        
+        view.addSubview(scrollView)
+    }
+    
+    override func viewWillLayoutSubviews(){
+        super.viewWillLayoutSubviews()
+        scrollView.contentSize = CGSize(width: 375, height: 800)
     }
     
     override func didReceiveMemoryWarning() {

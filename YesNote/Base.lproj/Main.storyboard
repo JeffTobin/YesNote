@@ -8,6 +8,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -31,32 +36,65 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-wq-hcL">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-bC-pm8">
-                                        <rect key="frame" x="0.0" y="75" width="375" height="176"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhM-iB-uZu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPf-aw-ZWW">
+                                                <rect key="frame" x="20" y="20" width="52" height="21"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="SCALE">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-bC-pm8">
+                                                <rect key="frame" x="0.0" y="198" width="375" height="176"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="176" id="1qi-vd-l8d"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChordToneReusableCell" id="DpU-hG-1qd">
+                                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DpU-hG-1qd" id="Rfq-MW-Mxe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQV-vV-Bqt">
+                                                <rect key="frame" x="20" y="74" width="338" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="176" id="1qi-vd-l8d"/>
+                                            <constraint firstItem="e8E-bC-pm8" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" id="9v1-J1-5rj"/>
+                                            <constraint firstItem="gPf-aw-ZWW" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" constant="20" id="IM6-K3-ST7"/>
+                                            <constraint firstItem="gPf-aw-ZWW" firstAttribute="top" secondItem="rhM-iB-uZu" secondAttribute="top" constant="20" id="bXF-Au-VzH"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gPf-aw-ZWW" secondAttribute="trailing" constant="20" symbolic="YES" id="dbJ-Ea-reZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="e8E-bC-pm8" secondAttribute="trailing" id="foq-6y-fje"/>
+                                            <constraint firstItem="e8E-bC-pm8" firstAttribute="centerY" secondItem="rhM-iB-uZu" secondAttribute="centerY" constant="-67.5" id="kHr-vf-1yU"/>
                                         </constraints>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChordToneReusableCell" id="DpU-hG-1qd">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DpU-hG-1qd" id="Rfq-MW-Mxe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="e8E-bC-pm8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sSU-wq-hcL" secondAttribute="leading" id="4iy-Fg-rzP"/>
-                                    <constraint firstItem="e8E-bC-pm8" firstAttribute="top" secondItem="sSU-wq-hcL" secondAttribute="top" constant="75" id="5OO-Ah-3AC"/>
-                                    <constraint firstAttribute="bottom" secondItem="e8E-bC-pm8" secondAttribute="bottom" constant="352" id="Drh-xQ-F2m"/>
-                                    <constraint firstItem="e8E-bC-pm8" firstAttribute="centerX" secondItem="sSU-wq-hcL" secondAttribute="centerX" id="GcR-4A-b7x"/>
-                                    <constraint firstAttribute="trailing" secondItem="e8E-bC-pm8" secondAttribute="trailing" id="SX1-Bl-C34"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e8E-bC-pm8" secondAttribute="trailing" id="W9z-zu-nIs"/>
-                                    <constraint firstItem="e8E-bC-pm8" firstAttribute="leading" secondItem="sSU-wq-hcL" secondAttribute="leading" id="XGc-Gl-xZJ"/>
+                                    <constraint firstItem="rhM-iB-uZu" firstAttribute="centerY" secondItem="sSU-wq-hcL" secondAttribute="centerY" id="7Br-1H-JgF"/>
+                                    <constraint firstItem="rhM-iB-uZu" firstAttribute="top" secondItem="sSU-wq-hcL" secondAttribute="top" id="GXI-P6-ibI"/>
+                                    <constraint firstAttribute="bottom" secondItem="rhM-iB-uZu" secondAttribute="bottom" id="O7m-KO-1Hl"/>
+                                    <constraint firstAttribute="trailing" secondItem="rhM-iB-uZu" secondAttribute="trailing" id="UyW-46-kaJ"/>
+                                    <constraint firstItem="rhM-iB-uZu" firstAttribute="centerX" secondItem="sSU-wq-hcL" secondAttribute="centerX" id="kib-72-Yuz"/>
+                                    <constraint firstItem="rhM-iB-uZu" firstAttribute="leading" secondItem="sSU-wq-hcL" secondAttribute="leading" id="rhc-95-z6M"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UND-OZ-yBR">
@@ -107,6 +145,7 @@
                     <connections>
                         <outlet property="DroneTableView" destination="e8E-bC-pm8" id="3zu-Ei-kf3"/>
                         <outlet property="chordButton" destination="UND-OZ-yBR" id="hyA-Lr-lV8"/>
+                        <outlet property="scrollView" destination="sSU-wq-hcL" id="Iin-Ms-2jY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
