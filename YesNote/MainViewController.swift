@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var DroneTableView: UITableView!
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,7 +24,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         cell?.contentView.backgroundColor = UIColor.clear
         cell?.backgroundColor = UIColor.clear
-        cell?.textLabel?.text = "1234"
+        //cell?.textLabel?.text = "1234"
         
         return cell!
     }
@@ -61,6 +61,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 //----------------------------------------------------------------------------------------------------------
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var playPauseRefrence: UIButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -86,11 +87,16 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             };
         
         view.addSubview(scrollView)
+        view.bringSubview(toFront: playPauseRefrence)
     }
     
     override func viewWillLayoutSubviews(){
         super.viewWillLayoutSubviews()
-        scrollView.contentSize = CGSize(width: 375, height: 800)
+        
+        let height = (self.view.frame.height + self.DroneTableView.contentSize.height) - 200
+        if height > 667 {
+            scrollView.contentSize = CGSize(width:self.view.frame.width, height: height)
+        }
     }
     
     override func didReceiveMemoryWarning() {
