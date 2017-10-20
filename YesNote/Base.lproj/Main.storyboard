@@ -58,7 +58,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-bC-pm8">
-                                                <rect key="frame" x="0.0" y="188" width="320" height="180"/>
+                                                <rect key="frame" x="0.0" y="183" width="320" height="180"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="1qi-vd-l8d"/>
@@ -74,7 +74,7 @@
                                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WR4-HZ-rp2">
                                                                     <rect key="frame" x="100" y="8" width="165" height="31"/>
                                                                 </slider>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhW-Rf-RSB">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhW-Rf-RSB" customClass="DroneNoteAndMuteButton" customModule="YesNote" customModuleProvider="target">
                                                                     <rect key="frame" x="15" y="6" width="35" height="35"/>
                                                                     <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
@@ -120,6 +120,7 @@
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
+                                                            <outlet property="droneNoteAndMuteButton" destination="xhW-Rf-RSB" id="bXm-eD-A7t"/>
                                                             <outlet property="volumeSlider" destination="WR4-HZ-rp2" id="ABY-cZ-oo9"/>
                                                         </connections>
                                                     </tableViewCell>
@@ -151,7 +152,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="web-Rn-0QR">
-                                                <rect key="frame" x="10" y="165" width="56" height="19"/>
+                                                <rect key="frame" x="10" y="160" width="56" height="19"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="DRONE">
                                                         <attributes>
@@ -169,7 +170,7 @@
                                         <constraints>
                                             <constraint firstItem="web-Rn-0QR" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" constant="10" id="0FN-Zp-knS"/>
                                             <constraint firstItem="5Ki-og-ma3" firstAttribute="width" secondItem="nQV-vV-Bqt" secondAttribute="width" id="2Fc-f5-cwA"/>
-                                            <constraint firstItem="web-Rn-0QR" firstAttribute="top" secondItem="5Ki-og-ma3" secondAttribute="bottom" constant="30" id="45g-oj-UBp"/>
+                                            <constraint firstItem="web-Rn-0QR" firstAttribute="top" secondItem="5Ki-og-ma3" secondAttribute="bottom" constant="25" id="45g-oj-UBp"/>
                                             <constraint firstItem="e8E-bC-pm8" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" id="9v1-J1-5rj"/>
                                             <constraint firstItem="nQV-vV-Bqt" firstAttribute="top" secondItem="rhM-iB-uZu" secondAttribute="top" constant="35" id="Ab7-IY-Iqk"/>
                                             <constraint firstItem="30X-tX-Rah" firstAttribute="centerX" secondItem="rhM-iB-uZu" secondAttribute="centerX" id="EbR-Km-cGx"/>
@@ -220,6 +221,9 @@
                                     <constraint firstAttribute="width" constant="92" id="R4B-S5-EPj"/>
                                 </constraints>
                                 <state key="normal" image="playPause"/>
+                                <connections>
+                                    <action selector="playPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQb-2n-c9I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

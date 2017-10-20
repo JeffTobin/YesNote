@@ -11,10 +11,12 @@ import UIKit
 class CellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var volumeSlider: UISlider!
+    @IBOutlet weak var droneNoteAndMuteButton: DroneNoteAndMuteButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        droneNoteAndMuteButton.layer.borderWidth = 2.0
+        droneNoteAndMuteButton.layer.borderColor = UIColor(red:0.00, green:0.33, blue:0.58, alpha:1.0).cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

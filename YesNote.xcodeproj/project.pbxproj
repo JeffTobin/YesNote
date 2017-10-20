@@ -19,6 +19,7 @@
 		3FC674561F99614600E2A352 /* STAFCPE_.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 3FC674511F99614600E2A352 /* STAFCPE_.TTF */; };
 		3FC674571F99614600E2A352 /* Rhyth.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC674521F99614600E2A352 /* Rhyth.otf */; };
 		3FC674591F997FB600E2A352 /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC674581F997FB600E2A352 /* CellTableViewCell.swift */; };
+		3FC6745B1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3FC674511F99614600E2A352 /* STAFCPE_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STAFCPE_.TTF; sourceTree = "<group>"; };
 		3FC674521F99614600E2A352 /* Rhyth.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyth.otf; sourceTree = "<group>"; };
 		3FC674581F997FB600E2A352 /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
+		3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneNoteAndMuteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				1792968F1DF0EA3E00273528 /* AppDelegate.swift */,
 				179296911DF0EA3E00273528 /* MainViewController.swift */,
+				3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */,
 				3FC674581F997FB600E2A352 /* CellTableViewCell.swift */,
 				3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */,
 				179296931DF0EA3E00273528 /* Main.storyboard */,
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC6745B1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift in Sources */,
 				3F7A893E1F910F8B00E6AF2E /* ChordSelectViewController.swift in Sources */,
 				3FC674591F997FB600E2A352 /* CellTableViewCell.swift in Sources */,
 				179296921DF0EA3E00273528 /* MainViewController.swift in Sources */,
