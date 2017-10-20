@@ -9,7 +9,7 @@
 import UIKit
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDataSource {
-    var numNotesInChord = 4
+    var numNotesInChord = 4  //no more than 7 interface builder doesn't like it
     
     
 //placeholders----------------------------------------------------------------------------------------------
