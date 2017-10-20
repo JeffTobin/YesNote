@@ -20,13 +20,38 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = DroneTableView.dequeueReusableCell(withIdentifier: "ChordToneReusableCell")
+        let cell = DroneTableView.dequeueReusableCell(withIdentifier: "ChordToneReusableCell") as! CellTableViewCell
         
-        cell?.contentView.backgroundColor = UIColor.clear
-        cell?.backgroundColor = UIColor.clear
+        cell.contentView.backgroundColor = UIColor.clear
+        cell.backgroundColor = UIColor.clear
         //cell?.textLabel?.text = "1234"
+        cell.volumeSlider.tag = indexPath.row
+        cell.volumeSlider.addTarget(self, action:#selector(sliderValueChange(sender:)), for: .valueChanged)
         
-        return cell!
+        return cell
+    }
+    
+    func sliderValueChange(sender: UISlider) {
+        // Get the sliders values
+        //let currentValue = Int(sender.value)
+        let sliderRow = sender.tag
+        
+        switch sliderRow {
+        case 0:
+            print("slider 1")
+            break
+        case 1:
+            print("slider 2")
+            break
+        case 2:
+            print("slider 3")
+            break
+        case 3:
+            print("slider 4")
+            break
+        default:
+            break
+        }
     }
     
     
