@@ -9,14 +9,29 @@
 import UIKit
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDataSource {
+    var numNotesInChord = 4
     
+    
+//placeholders----------------------------------------------------------------------------------------------
+    func enterChord()->[Int] {
+        var notes = Array(repeating: 0, count: numNotesInChord)
+            
+        for i in 0...numNotesInChord - 1 {
+            notes[i] = (Int(arc4random_uniform(11)))
+        }
+        return notes
+    }
+//----------------------------------------------------------------------------------------------------------
+    
+    
+ 
 //----------------------------------------------------------------------------------------------------------
 // Drone Volume controlls
 //----------------------------------------------------------------------------------------------------------
     @IBOutlet weak var DroneTableView: UITableView!
-    var numNotesInChord = 4
     var toggleButtons = [Int: (Bool, Float)]()
     var volumeFloats = [Float]()
+    var audioPlayer : AudioPlayer!
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numNotesInChord
@@ -39,8 +54,19 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     func sliderValueChange(sender: UISlider) {
         // Get the sliders values
+        let buttonRow = sender.tag
+        if toggleButtons[buttonRow] == nil{
+            toggleButtons[buttonRow] = (true, 0.0)
+        }
+        
         let sliderRow = sender.tag
-        volumeFloats[sliderRow] = sender.value
+        if toggleButtons[sliderRow]?.0 == true {
+            volumeFloats[sliderRow] = sender.value
+            audioPlayer.changeVolume(note: sliderRow, volume: sender.value)
+        }
+        else{
+            toggleButtons[sliderRow] = (false, sender.value)
+        }
     }
     
     func droneButtonPress(sender: DroneNoteAndMuteButton) {
@@ -55,18 +81,23 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             sender.reference.backgroundColor = UIColor.clear
             sender.reference.setTitleColor(UIColor(red:0.00, green:0.33, blue:0.58, alpha:1.0), for: .normal)
             toggleButtons[buttonRow] = (false, volumeFloats[buttonRow])
+            audioPlayer.changeVolume(note: buttonRow, volume: 0.0)
             volumeFloats[buttonRow] = 0.0
         }
         else {
             sender.reference.backgroundColor = UIColor(red:0.00, green:0.33, blue:0.58, alpha:1.0)
             sender.reference.setTitleColor(UIColor.white, for: .normal)
             volumeFloats[buttonRow] = (toggleButtons[buttonRow]?.1)!
+            audioPlayer.changeVolume(note: buttonRow, volume: (toggleButtons[buttonRow]?.1)!)
             toggleButtons[buttonRow] = (true, volumeFloats[buttonRow])
         }
     }
     
     @IBAction func playPauseButton(_ sender: UIButton) {
-        print(volumeFloats)
+        audioPlayer.togglePlay(chord: enterChord())
+        for i in 0...numNotesInChord - 1 {
+            audioPlayer.changeVolume(note: i, volume: volumeFloats[i])
+        }
     }
     
     
@@ -132,6 +163,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         view.addSubview(scrollView)
         view.bringSubview(toFront: playPauseRefrence)
+        
+        audioPlayer = AudioPlayer(numNotes: numNotesInChord)
     }
     
     override func viewWillLayoutSubviews(){

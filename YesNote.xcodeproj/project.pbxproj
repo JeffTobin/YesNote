@@ -12,6 +12,9 @@
 		179296951DF0EA3E00273528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179296931DF0EA3E00273528 /* Main.storyboard */; };
 		179296971DF0EA3E00273528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179296961DF0EA3E00273528 /* Assets.xcassets */; };
 		1792969A1DF0EA3E00273528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179296981DF0EA3E00273528 /* LaunchScreen.storyboard */; };
+		3F1F0C571F9A3A5E006A7EED /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */; };
+		3F1F0C581F9A3A5E006A7EED /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F1F0C5B1F9A4811006A7EED /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */; };
 		3F7A893E1F910F8B00E6AF2E /* ChordSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */; };
 		3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */; };
 		3FC674541F99614600E2A352 /* RhythmsDownStem.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */; };
@@ -22,6 +25,20 @@
 		3FC6745B1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F1F0C591F9A3A5E006A7EED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F1F0C581F9A3A5E006A7EED /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1792968C1DF0EA3E00273528 /* YesNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YesNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1792968F1DF0EA3E00273528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +47,8 @@
 		179296961DF0EA3E00273528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		179296991DF0EA3E00273528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1792969B1DF0EA3E00273528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordSelectViewController.swift; sourceTree = "<group>"; };
 		3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StaffClefPitchesEasy.suit; sourceTree = "<group>"; };
 		3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhythmsDownStem.otf; sourceTree = "<group>"; };
@@ -45,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1F0C571F9A3A5E006A7EED /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +74,7 @@
 		179296831DF0EA3D00273528 = {
 			isa = PBXGroup;
 			children = (
+				3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */,
 				1792968E1DF0EA3E00273528 /* YesNote */,
 				1792968D1DF0EA3E00273528 /* Products */,
 			);
@@ -72,6 +93,7 @@
 			children = (
 				1792968F1DF0EA3E00273528 /* AppDelegate.swift */,
 				179296911DF0EA3E00273528 /* MainViewController.swift */,
+				3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */,
 				3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */,
 				3FC674581F997FB600E2A352 /* CellTableViewCell.swift */,
 				3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */,
@@ -106,6 +128,7 @@
 				179296881DF0EA3E00273528 /* Sources */,
 				179296891DF0EA3E00273528 /* Frameworks */,
 				1792968A1DF0EA3E00273528 /* Resources */,
+				3F1F0C591F9A3A5E006A7EED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +203,7 @@
 				3FC674591F997FB600E2A352 /* CellTableViewCell.swift in Sources */,
 				179296921DF0EA3E00273528 /* MainViewController.swift in Sources */,
 				179296901DF0EA3E00273528 /* AppDelegate.swift in Sources */,
+				3F1F0C5B1F9A4811006A7EED /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +343,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CJ2D7LGELZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/YesNote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = emanon.elad.PickerExample;
@@ -333,6 +361,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CJ2D7LGELZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/YesNote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = emanon.elad.PickerExample;
