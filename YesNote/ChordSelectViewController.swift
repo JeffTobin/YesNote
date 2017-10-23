@@ -65,7 +65,7 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         if (pickerLabel == nil)
         {
             pickerLabel = UILabel()
-            pickerLabel?.font = UIFont(name: "Helvetica Neue", size: 14)
+            pickerLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
             pickerLabel?.textAlignment = NSTextAlignment.center
         }
         if component == 0 || component == 2 {
