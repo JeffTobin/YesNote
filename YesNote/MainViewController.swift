@@ -105,6 +105,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 // Popup Selectors controlls
 //----------------------------------------------------------------------------------------------------------
     @IBOutlet weak var chordButton: UIButton!
+    @IBOutlet weak var scaleLabel: UILabel!
     
     @IBAction func chordPopUp(_ sender: UIButton) {
         self.performSegue(withIdentifier: "chordPopUp", sender: self)
