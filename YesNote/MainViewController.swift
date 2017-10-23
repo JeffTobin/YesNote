@@ -9,7 +9,13 @@
 import UIKit
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDataSource {
+    //num drone notes
     var numNotesInChord = 4  //no more than 7 interface builder doesn't like it
+    //stored chord picker info
+    var row1 = 0
+    var row2 = 0
+    var row3 = 0
+    var row4 = 0
     
     
 //placeholders----------------------------------------------------------------------------------------------
@@ -171,9 +177,11 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     override func viewWillLayoutSubviews(){
         super.viewWillLayoutSubviews()
         
-        let height = (self.view.frame.height + self.DroneTableView.contentSize.height) - 180
-        if height >= self.view.frame.height {
-            scrollView.contentSize = CGSize(width:self.view.frame.width, height: height)
+        if self.DroneTableView.contentSize.height > 138 {
+            let scrollHeight = (self.view.frame.height + self.DroneTableView.contentSize.height) - 138
+            scrollView.contentSize = CGSize(width:self.view.frame.width, height: scrollHeight)
+            //let Y_offset = rhythmView.frame.origin.y + self.DroneTableView.contentSize.height - 138
+            //rhythmView.frame.origin.y = Y_offset
         }
     }
     
