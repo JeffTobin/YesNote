@@ -31,7 +31,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txk-dE-f5n">
@@ -42,10 +42,10 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-wq-hcL">
-                                <rect key="frame" x="0.0" y="64" width="320" height="686"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhM-iB-uZu">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="686"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPf-aw-ZWW">
                                                 <rect key="frame" x="10" y="10" width="51" height="19"/>
@@ -338,7 +338,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGA-Io-KJ3">
-                                <rect key="frame" x="114" y="690" width="92" height="50"/>
+                                <rect key="frame" x="114" y="508" width="92" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="31a-1a-fbH"/>
                                     <constraint firstAttribute="width" constant="92" id="R4B-S5-EPj"/>
@@ -369,7 +369,6 @@
                             <constraint firstItem="sSU-wq-hcL" firstAttribute="leading" secondItem="txk-dE-f5n" secondAttribute="leading" id="zq1-F9-oug"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="320" height="750"/>
                     <connections>
                         <outlet property="DroneTableView" destination="e8E-bC-pm8" id="3zu-Ei-kf3"/>
                         <outlet property="chordButton" destination="UND-OZ-yBR" id="hyA-Lr-lV8"/>
