@@ -10,21 +10,33 @@ import UIKit
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDataSource {
    
-    //num drone notes - no more than 7 interface builder doesn't like it
+    //num drone notes - no more than 8 interface builder doesn't like it
     var numNotesInChord = 3
    
-    
+    //placeholders----------------------------------------------------------------------------------------------
+    func enterChord()->[Int] {
+        var notes = Array(repeating: 0, count: numNotesInChord)
+        
+        for i in 0...numNotesInChord - 1 {
+            notes[i] = (Int(arc4random_uniform(11)))
+        }
+        return notes
+    }
+    //----------------------------------------------------------------------------------------------------------
     
 //----------------------------------------------------------------------------------------------------------
-// Popup Selectors controlls
+// Popup Selectors controlls & Rhythm Volume
 //----------------------------------------------------------------------------------------------------------
     @IBOutlet weak var chordButton: UIButton!
+    @IBOutlet weak var rhythmVolume: UIBorderButton!
     @IBOutlet weak var scaleLabel: UILabel!
     //stored chord picker info
     var row1 = 0
     var row2 = 0
     var row3 = 0
     var row4 = 0
+    //toggle rhythm volume
+    var volMute = false
     
     @IBAction func chordPopUp(_ sender: UIButton) {
         self.performSegue(withIdentifier: "chordPopUp", sender: self)
@@ -44,6 +56,17 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             if let PopUp = destinationVC.popoverPresentationController{
                 PopUp.delegate = self
             }
+        }
+    }
+    
+    @IBAction func rhythmVolumeButton(_ sender: UIButton) {
+        if volMute == false {
+            rhythmVolume.setImage(UIImage(named: "Untitled Diagram3"), for: .normal)
+            volMute = true
+        }
+        else{
+            rhythmVolume.setImage(UIImage(named: "Untitled Diagram2"), for: .normal)
+            volMute = false
         }
     }
     
@@ -122,17 +145,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             audioPlayer.changeVolume(note: i, volume: Float(volumeFloats[i]))
         }
     }
-    
-    //placeholders----------------------------------------------------------------------------------------------
-    func enterChord()->[Int] {
-        var notes = Array(repeating: 0, count: numNotesInChord)
-        
-        for i in 0...numNotesInChord - 1 {
-            notes[i] = (Int(arc4random_uniform(11)))
-        }
-        return notes
-    }
-    //----------------------------------------------------------------------------------------------------------
     
     
     

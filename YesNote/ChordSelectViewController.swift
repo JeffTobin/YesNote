@@ -13,7 +13,7 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
     let scales = ["Ionian","Dorian","Phrygian","Lydian","Mixolydian","Aeloian","Locrian"]
     let roots = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
     
-    
+    //placeholders----------------------------------------------------------------------------------------------
     func testFunc(row1: Int, row2: Int, row3: Int) -> [String]{
         if row3 % 2 == 0{
             return ["1","2","3","4","5"]
@@ -22,7 +22,7 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
             return ["One","Two","Three"]
         }
     }
-    
+    //----------------------------------------------------------------------------------------------------------
     
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var selectionLabel: UILabel!
@@ -35,36 +35,25 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         mainVC?.row3 = picker.selectedRow(inComponent: 2)
         mainVC?.row4 = picker.selectedRow(inComponent: 3)
         
-        let d1 = roots [(mainVC?.row1)!]
-        let d2 = scales[(mainVC?.row2)!]
-        let d3 = roots [(mainVC?.row3)!]
-        let d4 = String((mainVC?.row4)!)
+        let r1 = roots [(mainVC?.row1)!]
+        let r2 = scales[(mainVC?.row2)!]
+        let r3 = roots [(mainVC?.row3)!]
+        let r4 = String((mainVC?.row4)!)
         
-        let chordText = d3 + " " + d4 + " ▾"
-        let scaleText = d1 + " " + d2
+        let chordText = r3 + " " + r4 + " ▾"
+        let scaleText = r1 + " " + r2
         mainVC?.chordButton.setTitle(chordText as String, for: .normal)
         mainVC?.scaleLabel.text = scaleText as String
         
         mainVC?.numNotesInChord = 1 + picker.selectedRow(inComponent: 3)
         mainVC?.DroneTableView.reloadData()
+        mainVC?.audioPlayer.togglePlay(chord: [])
         mainVC?.audioPlayer = AudioPlayer(numNotes:(mainVC?.numNotesInChord)!)
         
         DispatchQueue.main.async {
             self.mainVC?.viewWillLayoutSubviews()
         }
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        picker.delegate = self
-        picker.dataSource = self
-        
-        picker.selectRow((mainVC?.row1)!, inComponent:0, animated:true)
-        picker.selectRow((mainVC?.row2)!, inComponent:1, animated:true)
-        picker.selectRow((mainVC?.row3)!, inComponent:2, animated:true)
-        picker.selectRow((mainVC?.row4)!, inComponent:3, animated:true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -122,12 +111,12 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerView.reloadAllComponents()
         
-        let d1 = roots[picker.selectedRow(inComponent: 0)]
-        let d2 = scales[picker.selectedRow(inComponent: 1)]
-        let d3 = roots[picker.selectedRow(inComponent: 2)]
-        let d4 = String(picker.selectedRow(inComponent: 3))
+        let r1 = roots [picker.selectedRow(inComponent: 0)]
+        let r2 = scales[picker.selectedRow(inComponent: 1)]
+        let r3 = roots [picker.selectedRow(inComponent: 2)]
+        let r4 = String(picker.selectedRow(inComponent: 3))
 
-        let numberString = d1 + " " + d2 + " / " + d3 + " " + d4
+        let numberString = "\(r1) \(r2) / \(r3) \(r4)"
         
         let textAttributes = [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue]
         let attributedString = NSAttributedString(string: numberString, attributes: textAttributes)
@@ -135,6 +124,33 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        picker.delegate = self
+        picker.dataSource = self
+        
+        let r1 = (mainVC?.row1)!
+        let r2 = (mainVC?.row2)!
+        let r3 = (mainVC?.row3)!
+        let r4 = (mainVC?.row4)!
+        
+        let p1 = roots [r1]
+        let p2 = scales[r2]
+        let p3 = roots [r3]
+        let p4 = String(r4)
+        
+        picker.selectRow(r1, inComponent:0, animated:true)
+        picker.selectRow(r2, inComponent:1, animated:true)
+        picker.selectRow(r3, inComponent:2, animated:true)
+        picker.selectRow(r4, inComponent:3, animated:true)
+        
+        let numberString = "\(p1) \(p2) / \(p3) \(p4)"
+        
+        let textAttributes = [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue]
+        let attributedString = NSAttributedString(string: numberString, attributes: textAttributes)
+        selectionLabel.attributedText = attributedString
+    }
 }
 
 
