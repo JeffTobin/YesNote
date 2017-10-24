@@ -25,13 +25,13 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="YesNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="MainViewController" customModule="YesNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txk-dE-f5n">
@@ -42,10 +42,10 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-wq-hcL">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="686"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhM-iB-uZu">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPf-aw-ZWW">
                                                 <rect key="frame" x="10" y="10" width="51" height="19"/>
@@ -82,7 +82,7 @@
                                                                     <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="35" id="BAr-xV-Dn2"/>
-                                                                        <constraint firstAttribute="width" constant="35" id="nTT-o8-hCg"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="nTT-o8-hCg"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <state key="normal" title="C">
@@ -194,13 +194,91 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwH-ok-rg3" customClass="UIBorderButton" customModule="YesNote" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="88" width="80" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ZOx-7d-toc"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Rhythm ▾">
+                                                            <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <real key="value" value="1.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsE-yO-2Id" customClass="UIBorderButton" customModule="YesNote" customModuleProvider="target">
+                                                        <rect key="frame" x="140" y="88" width="80" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Jfm-jT-4Z8"/>
+                                                        </constraints>
+                                                        <state key="normal" title="120bpm ▾">
+                                                            <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <real key="value" value="1.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y70-aT-tMf" customClass="UIBorderButton" customModule="YesNote" customModuleProvider="target">
+                                                        <rect key="frame" x="230" y="88" width="40" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="cwu-zb-yIq"/>
+                                                            <constraint firstAttribute="height" constant="30" id="seX-gU-BaO"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                                        <state key="normal" image="Untitled Diagram">
+                                                            <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <real key="value" value="1.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="tintedColor">
+                                                                <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="y70-aT-tMf" firstAttribute="leading" secondItem="TsE-yO-2Id" secondAttribute="trailing" constant="10" id="3zj-ky-94C"/>
                                                     <constraint firstAttribute="height" constant="130" id="7qf-bQ-l2e"/>
+                                                    <constraint firstItem="xwH-ok-rg3" firstAttribute="top" secondItem="sSh-L2-QSj" secondAttribute="bottom" constant="8" id="E6C-jx-NvW"/>
+                                                    <constraint firstItem="TsE-yO-2Id" firstAttribute="centerX" secondItem="UhG-wg-YiK" secondAttribute="centerX" constant="20" id="H9n-50-wtn"/>
+                                                    <constraint firstItem="y70-aT-tMf" firstAttribute="top" secondItem="sSh-L2-QSj" secondAttribute="bottom" constant="8" id="LsT-Qs-w2X"/>
                                                     <constraint firstItem="sSh-L2-QSj" firstAttribute="width" secondItem="sSh-L2-QSj" secondAttribute="height" multiplier="311:80" constant="116.625" id="MaP-8y-el8"/>
+                                                    <constraint firstItem="xwH-ok-rg3" firstAttribute="centerX" secondItem="UhG-wg-YiK" secondAttribute="centerX" constant="-70" id="NIJ-vO-QsB"/>
                                                     <constraint firstItem="dfO-g9-jbH" firstAttribute="leading" secondItem="UhG-wg-YiK" secondAttribute="leading" constant="10" id="PeQ-g1-G7x"/>
                                                     <constraint firstAttribute="bottom" secondItem="sSh-L2-QSj" secondAttribute="bottom" constant="50" id="R9K-y6-AWx"/>
+                                                    <constraint firstItem="TsE-yO-2Id" firstAttribute="top" secondItem="sSh-L2-QSj" secondAttribute="bottom" constant="8" id="VzB-oz-i9c"/>
                                                     <constraint firstItem="sSh-L2-QSj" firstAttribute="centerX" secondItem="UhG-wg-YiK" secondAttribute="centerX" id="Xpb-Gw-HOx"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dfO-g9-jbH" secondAttribute="trailing" id="cKv-ih-L36"/>
                                                     <constraint firstItem="sSh-L2-QSj" firstAttribute="top" secondItem="dfO-g9-jbH" secondAttribute="bottom" constant="1" id="dfN-Ky-NaK"/>
@@ -260,7 +338,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGA-Io-KJ3">
-                                <rect key="frame" x="114" y="508" width="92" height="50"/>
+                                <rect key="frame" x="114" y="690" width="92" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="31a-1a-fbH"/>
                                     <constraint firstAttribute="width" constant="92" id="R4B-S5-EPj"/>
@@ -291,6 +369,7 @@
                             <constraint firstItem="sSU-wq-hcL" firstAttribute="leading" secondItem="txk-dE-f5n" secondAttribute="leading" id="zq1-F9-oug"/>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="320" height="750"/>
                     <connections>
                         <outlet property="DroneTableView" destination="e8E-bC-pm8" id="3zu-Ei-kf3"/>
                         <outlet property="chordButton" destination="UND-OZ-yBR" id="hyA-Lr-lV8"/>

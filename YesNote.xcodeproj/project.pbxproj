@@ -16,6 +16,7 @@
 		3F1F0C581F9A3A5E006A7EED /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F1F0C5B1F9A4811006A7EED /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */; };
 		3F7A893E1F910F8B00E6AF2E /* ChordSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */; };
+		3FC3C4731F9FA38900E3262D /* UIBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */; };
 		3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */; };
 		3FC674541F99614600E2A352 /* RhythmsDownStem.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */; };
 		3FC674551F99614600E2A352 /* STAFCP__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 3FC674501F99614600E2A352 /* STAFCP__.TTF */; };
@@ -50,6 +51,7 @@
 		3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordSelectViewController.swift; sourceTree = "<group>"; };
+		3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderButton.swift; sourceTree = "<group>"; };
 		3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StaffClefPitchesEasy.suit; sourceTree = "<group>"; };
 		3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhythmsDownStem.otf; sourceTree = "<group>"; };
 		3FC674501F99614600E2A352 /* STAFCP__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STAFCP__.TTF; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				3FC674581F997FB600E2A352 /* CellTableViewCell.swift */,
 				3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */,
 				179296931DF0EA3E00273528 /* Main.storyboard */,
+				3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */,
 				3FC6744D1F99614600E2A352 /* fonts */,
 				179296961DF0EA3E00273528 /* Assets.xcassets */,
 				179296981DF0EA3E00273528 /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				3FC674591F997FB600E2A352 /* CellTableViewCell.swift in Sources */,
 				179296921DF0EA3E00273528 /* MainViewController.swift in Sources */,
 				179296901DF0EA3E00273528 /* AppDelegate.swift in Sources */,
+				3FC3C4731F9FA38900E3262D /* UIBorderButton.swift in Sources */,
 				3F1F0C5B1F9A4811006A7EED /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

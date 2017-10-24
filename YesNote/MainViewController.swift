@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDataSource {
     //num drone notes
-    var numNotesInChord = 4  //no more than 7 interface builder doesn't like it
+    var numNotesInChord = 6//no more than 7 interface builder doesn't like it
     //stored chord picker info
     var row1 = 0
     var row2 = 0
