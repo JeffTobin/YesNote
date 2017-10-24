@@ -9,28 +9,46 @@
 import UIKit
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDataSource {
-    //num drone notes
-    var numNotesInChord = 3//no more than 7 interface builder doesn't like it
+   
+    //num drone notes - no more than 7 interface builder doesn't like it
+    var numNotesInChord = 3
+   
+    
+    
+//----------------------------------------------------------------------------------------------------------
+// Popup Selectors controlls
+//----------------------------------------------------------------------------------------------------------
+    @IBOutlet weak var chordButton: UIButton!
+    @IBOutlet weak var scaleLabel: UILabel!
     //stored chord picker info
     var row1 = 0
     var row2 = 0
     var row3 = 0
     var row4 = 0
     
-    
-//placeholders----------------------------------------------------------------------------------------------
-    func enterChord()->[Int] {
-        var notes = Array(repeating: 0, count: numNotesInChord)
-            
-        for i in 0...numNotesInChord - 1 {
-            notes[i] = (Int(arc4random_uniform(11)))
-        }
-        return notes
+    @IBAction func chordPopUp(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "chordPopUp", sender: self)
     }
-//----------------------------------------------------------------------------------------------------------
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "chordPopUp" {
+            let destinationVC = segue.destination
+            destinationVC.popoverPresentationController?.sourceRect = CGRect(x: chordButton.frame.size.width/2, y: chordButton.frame.size.height, width: 0, height: 0)
+            let frameSize = self.view.frame.width - 10
+            destinationVC.preferredContentSize = CGSize(width: frameSize, height: frameSize)
+            
+            if let PopUp = destinationVC.popoverPresentationController{
+                PopUp.delegate = self
+            }
+        }
+    }
     
     
- 
+    
 //----------------------------------------------------------------------------------------------------------
 // Drone Volume controlls
 //----------------------------------------------------------------------------------------------------------
@@ -38,7 +56,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var toggleButtons = [Int: (Bool, Float)]()
     var volumeFloats = Array(repeating: 0.5, count: 10) //no more than 10 notes
     var audioPlayer : AudioPlayer!
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numNotesInChord
     }
@@ -105,33 +123,17 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
     }
     
-    
-//----------------------------------------------------------------------------------------------------------
-// Popup Selectors controlls
-//----------------------------------------------------------------------------------------------------------
-    @IBOutlet weak var chordButton: UIButton!
-    @IBOutlet weak var scaleLabel: UILabel!
-    
-    @IBAction func chordPopUp(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "chordPopUp", sender: self)
-    }
-    
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "chordPopUp" {
-            let destinationVC = segue.destination
-            destinationVC.popoverPresentationController?.sourceRect = CGRect(x: chordButton.frame.size.width/2, y: chordButton.frame.size.height, width: 0, height: 0)
-            let frameSize = self.view.frame.width - 10
-            destinationVC.preferredContentSize = CGSize(width: frameSize, height: frameSize)
-            
-            if let PopUp = destinationVC.popoverPresentationController{
-                PopUp.delegate = self
-            }
+    //placeholders----------------------------------------------------------------------------------------------
+    func enterChord()->[Int] {
+        var notes = Array(repeating: 0, count: numNotesInChord)
+        
+        for i in 0...numNotesInChord - 1 {
+            notes[i] = (Int(arc4random_uniform(11)))
         }
+        return notes
     }
+    //----------------------------------------------------------------------------------------------------------
+    
     
     
 //----------------------------------------------------------------------------------------------------------
@@ -147,16 +149,17 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         return .lightContent
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "background.png")
         self.view.insertSubview(backgroundImage, at: 0)
-        
-        DispatchQueue.main.async {
-            self.viewToAppear()
-        }
         
         DroneTableView.dataSource = self
         DroneTableView.backgroundColor = UIColor.clear
@@ -170,7 +173,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         audioPlayer = AudioPlayer(numNotes: numNotesInChord)
     }
     
-    func viewToAppear() {
+    override func viewWillLayoutSubviews(){
         DispatchQueue.main.async {
             //This code will run in the main thread:
             var frame = self.DroneTableView.frame
@@ -179,10 +182,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             
             self.viewWillLayoutSubviews()
         }
-    }
-    
-    override func viewWillLayoutSubviews(){
-        super.viewWillLayoutSubviews()
         
         if self.DroneTableView.contentSize.height > 138 {
             let scrollHeight = (self.view.frame.height + self.DroneTableView.contentSize.height) - 202
@@ -193,10 +192,5 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
         let Y_offset = self.DroneTableView.contentSize.height + 178
         rhythmView.frame.origin.y = Y_offset
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

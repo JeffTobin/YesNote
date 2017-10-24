@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhM-iB-uZu">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPf-aw-ZWW">
                                                 <rect key="frame" x="10" y="10" width="51" height="19"/>
@@ -95,7 +95,7 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </button>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled Diagram copy" translatesAutoresizingMaskIntoConstraints="NO" id="xW2-0d-2sZ">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled Diagram1" translatesAutoresizingMaskIntoConstraints="NO" id="xW2-0d-2sZ">
                                                                     <rect key="frame" x="72" y="18" width="10" height="10"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="10" id="584-26-ajR"/>
@@ -244,7 +244,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="seX-gU-BaO"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
-                                                        <state key="normal" image="Untitled Diagram">
+                                                        <state key="normal" image="Untitled Diagram2">
                                                             <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -286,7 +286,6 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="web-Rn-0QR" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" constant="10" id="0FN-Zp-knS"/>
                                             <constraint firstItem="5Ki-og-ma3" firstAttribute="width" secondItem="nQV-vV-Bqt" secondAttribute="width" id="2Fc-f5-cwA"/>
@@ -313,9 +312,9 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="rhM-iB-uZu" firstAttribute="centerY" secondItem="sSU-wq-hcL" secondAttribute="centerY" id="7Br-1H-JgF"/>
+                                    <constraint firstItem="rhM-iB-uZu" firstAttribute="centerY" secondItem="sSU-wq-hcL" secondAttribute="centerY" constant="98" id="7Br-1H-JgF"/>
                                     <constraint firstItem="rhM-iB-uZu" firstAttribute="top" secondItem="sSU-wq-hcL" secondAttribute="top" id="GXI-P6-ibI"/>
-                                    <constraint firstAttribute="bottom" secondItem="rhM-iB-uZu" secondAttribute="bottom" id="O7m-KO-1Hl"/>
+                                    <constraint firstAttribute="bottom" secondItem="rhM-iB-uZu" secondAttribute="bottom" constant="-196" id="O7m-KO-1Hl"/>
                                     <constraint firstAttribute="trailing" secondItem="rhM-iB-uZu" secondAttribute="trailing" id="UyW-46-kaJ"/>
                                     <constraint firstItem="rhM-iB-uZu" firstAttribute="centerX" secondItem="sSU-wq-hcL" secondAttribute="centerX" id="kib-72-Yuz"/>
                                     <constraint firstItem="rhM-iB-uZu" firstAttribute="leading" secondItem="sSU-wq-hcL" secondAttribute="leading" id="rhc-95-z6M"/>
@@ -509,7 +508,8 @@
     </scenes>
     <resources>
         <image name="Untitled Diagram" width="151" height="151"/>
-        <image name="Untitled Diagram copy" width="151" height="151"/>
+        <image name="Untitled Diagram1" width="151" height="151"/>
+        <image name="Untitled Diagram2" width="151" height="151"/>
         <image name="playPause" width="370" height="200"/>
     </resources>
 </document>

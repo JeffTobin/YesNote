@@ -50,7 +50,7 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         mainVC?.audioPlayer = AudioPlayer(numNotes:(mainVC?.numNotesInChord)!)
         
         DispatchQueue.main.async {
-            self.mainVC?.viewToAppear()
+            self.mainVC?.viewWillLayoutSubviews()
         }
         self.dismiss(animated: true, completion: nil)
     }
