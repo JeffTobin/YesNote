@@ -45,6 +45,13 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         mainVC?.chordButton.setTitle(chordText as String, for: .normal)
         mainVC?.scaleLabel.text = scaleText as String
         
+        mainVC?.numNotesInChord = 1 + picker.selectedRow(inComponent: 3)
+        mainVC?.DroneTableView.reloadData()
+        mainVC?.audioPlayer = AudioPlayer(numNotes:(mainVC?.numNotesInChord)!)
+        
+        DispatchQueue.main.async {
+            self.mainVC?.viewToAppear()
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -98,7 +105,9 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         }
         else if component == 3 {
             let chordstext = testFunc(row1: picker.selectedRow(inComponent: 0),row2: picker.selectedRow(inComponent: 1),row3: picker.selectedRow(inComponent: 2))
-            pickerLabel?.text = chordstext[row]
+            if chordstext.indices.contains(row) {
+                pickerLabel?.text = chordstext[row]
+            }
         }
         else{
             pickerLabel?.text = ""
