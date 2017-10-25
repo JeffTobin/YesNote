@@ -8,6 +8,7 @@
 
 import UIKit
 
+//drone table cells view
 class CellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var volumeSlider: UISlider!

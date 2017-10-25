@@ -8,6 +8,7 @@
 
 import UIKit
 
+//used for rhythm section buttons
 class UIBorderButton: UIButton {
 
     @IBInspectable var borderColor: UIColor = UIColor.white {

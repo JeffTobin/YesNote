@@ -339,12 +339,6 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradiant" translatesAutoresizingMaskIntoConstraints="NO" id="SPC-eE-Q7H">
-                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="utd-g3-nWj"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGA-Io-KJ3">
                                 <rect key="frame" x="114" y="508" width="92" height="50"/>
                                 <constraints>
@@ -363,13 +357,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sSU-wq-hcL" secondAttribute="bottom" id="8qe-ml-zYa"/>
                             <constraint firstItem="FGA-Io-KJ3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B2V-Lj-Xh0"/>
                             <constraint firstItem="UND-OZ-yBR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Fdp-dy-Mke"/>
-                            <constraint firstItem="SPC-eE-Q7H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gyq-Xp-9Yj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SPC-eE-Q7H" secondAttribute="bottom" id="HdB-lc-Jyv"/>
                             <constraint firstItem="txk-dE-f5n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kwu-l0-fbS"/>
                             <constraint firstAttribute="trailing" secondItem="txk-dE-f5n" secondAttribute="trailing" id="LN2-d8-3ur"/>
                             <constraint firstItem="sSU-wq-hcL" firstAttribute="trailing" secondItem="txk-dE-f5n" secondAttribute="trailing" id="UnA-eS-WDq"/>
                             <constraint firstAttribute="trailing" secondItem="sSU-wq-hcL" secondAttribute="trailing" id="a09-NR-Hqm"/>
-                            <constraint firstAttribute="trailing" secondItem="SPC-eE-Q7H" secondAttribute="trailing" id="chQ-c7-iun"/>
                             <constraint firstItem="txk-dE-f5n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dSc-nc-r6z"/>
                             <constraint firstItem="sSU-wq-hcL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="dl7-Tu-vTi"/>
                             <constraint firstItem="UND-OZ-yBR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fKl-q2-2rE"/>
@@ -523,7 +514,6 @@
         <image name="Untitled Diagram" width="151" height="151"/>
         <image name="Untitled Diagram1" width="151" height="151"/>
         <image name="Untitled Diagram2" width="151" height="151"/>
-        <image name="gradiant" width="432" height="90"/>
         <image name="playPause" width="370" height="200"/>
     </resources>
 </document>
