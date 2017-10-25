@@ -55,7 +55,7 @@ class AudioPlayer {
             }
             playing = false
         }
-        else {
+        else if chord.count != 0{
             for osc in oscillators {
                 osc.value.amplitude = Double(0.5)
             }
@@ -66,6 +66,9 @@ class AudioPlayer {
                 osc.value.start()
             }
             playing = true
+        }
+        else {
+            //nothing to see here just a bug fix
         }
     }
 }
