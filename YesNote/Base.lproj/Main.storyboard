@@ -215,6 +215,9 @@
                                                                 <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="rhythmSelector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Uc-dz-b0R"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsE-yO-2Id" customClass="UIBorderButton" customModule="YesNote" customModuleProvider="target">
                                                         <rect key="frame" x="140" y="88" width="80" height="30"/>
@@ -236,6 +239,9 @@
                                                                 <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tempoSelector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPv-19-WNu"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y70-aT-tMf" customClass="UIBorderButton" customModule="YesNote" customModuleProvider="target">
                                                         <rect key="frame" x="230" y="88" width="40" height="30"/>
@@ -386,6 +392,35 @@
             </objects>
             <point key="canvasLocation" x="-264.375" y="99.295774647887328"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="wr5-Pd-69G">
+            <objects>
+                <tableViewController id="WoD-HR-IPG" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VSV-Vz-Zwr">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VY1-rl-aBv">
+                                <rect key="frame" x="0.0" y="28" width="350" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VY1-rl-aBv" id="MWy-cp-Rl0">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WoD-HR-IPG" id="V3M-x8-mkZ"/>
+                            <outlet property="delegate" destination="WoD-HR-IPG" id="98v-La-9P7"/>
+                        </connections>
+                    </tableView>
+                    <size key="freeformSize" width="350" height="350"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zv-sc-VIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="332"/>
+        </scene>
         <!--Chord Select View Controller-->
         <scene sceneID="RZ7-IV-iO4">
             <objects>
@@ -507,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcO-7K-bvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636.79999999999995" y="99.850074962518747"/>
+            <point key="canvasLocation" x="579" y="-113"/>
         </scene>
     </scenes>
     <resources>

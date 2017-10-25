@@ -18,9 +18,9 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     //placeholders----------------------------------------------------------------------------------------------
     func enterChord()->[Int] {
-        var notes = Array(repeating: 0, count: numNotesInChord)
+        var notes = Array(repeating: 0, count: numNotesInChord + 1)
         
-        for i in 0...numNotesInChord - 1 {
+        for i in 0...numNotesInChord {
             notes[i] = (Int(arc4random_uniform(11)))
         }
         return notes
@@ -41,15 +41,19 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var row2 = 0
     var row3 = 0
     var row4 = 0
-    //toggle rhythm volume
-    var volMute = false
     
     
     //handle chord selector button press
     @IBAction func chordPopUp(_ sender: UIButton) {
         self.performSegue(withIdentifier: "chordPopUp", sender: self)
     }
-
+    @IBAction func rhythmSelector(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "chordPopUp", sender: self)
+    }
+    @IBAction func tempoSelector(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "chordPopUp", sender: self)
+    }
+    
     
     //force display of modal view as popup
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -79,6 +83,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var DroneTableView: UITableView!
     var toggleButtons = [Int: (Bool, Float)]()
     var volumeFloats = [Float]()
+    var RhythmvolMute = false
     var audioPlayer : AudioPlayer!
     
     
@@ -126,8 +131,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         //if not muted then change volume
         if toggleButtons[sliderRow]?.0 == true {
-            volumeFloats[sliderRow] = sender.value
-            audioPlayer.changeVolume(note: sliderRow, volume: sender.value)
+            volumeFloats[sliderRow + 1] = sender.value
+            audioPlayer.changeVolume(note: sliderRow + 1, volume: sender.value)
         }
         //if muted then store changed volume
         else{
@@ -150,31 +155,37 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             sender.reference.backgroundColor = UIColor.clear
             sender.reference.setTitleColor(UIColor(red:0.00, green:0.33, blue:0.58, alpha:1.0), for: .normal)
             
-            toggleButtons[buttonRow] = (false, Float(volumeFloats[buttonRow]))
-            audioPlayer.changeVolume(note: buttonRow, volume: 0.0)
-            volumeFloats[buttonRow] = 0.0
+            toggleButtons[buttonRow] = (false, Float(volumeFloats[buttonRow + 1]))
+            audioPlayer.changeVolume(note: buttonRow + 1, volume: 0.0)
+            volumeFloats[buttonRow + 1] = 0.0
         }
         //unmute drone note
         else {
             sender.reference.backgroundColor = UIColor(red:0.00, green:0.33, blue:0.58, alpha:1.0)
             sender.reference.setTitleColor(UIColor.white, for: .normal)
             
-            volumeFloats[buttonRow] = (toggleButtons[buttonRow]?.1)!
-            audioPlayer.changeVolume(note: buttonRow, volume: (toggleButtons[buttonRow]?.1)!)
-            toggleButtons[buttonRow] = (true, Float(volumeFloats[buttonRow]))
+            volumeFloats[buttonRow + 1] = (toggleButtons[buttonRow]?.1)!
+            audioPlayer.changeVolume(note: buttonRow + 1, volume: (toggleButtons[buttonRow]?.1)!)
+            toggleButtons[buttonRow] = (true, Float(volumeFloats[buttonRow + 1]))
         }
     }
     
     
     //handles toggling of rhythm mute button---------------------------------
     @IBAction func rhythmVolumeButton(_ sender: UIButton) {
-        if volMute == false {
+        if RhythmvolMute == false {
+            //mute rhythm volume
             rhythmVolume.setImage(UIImage(named: "Untitled Diagram3"), for: .normal)
-            volMute = true
+            volumeFloats[0] = 0.0
+            audioPlayer.changeVolume(note: 0, volume: 0.0)
+            RhythmvolMute = true
         }
         else{
+            //unmute rhythm volume
             rhythmVolume.setImage(UIImage(named: "Untitled Diagram2"), for: .normal)
-            volMute = false
+            volumeFloats[0] = 1.0
+            audioPlayer.changeVolume(note: 0, volume: 1.0)
+            RhythmvolMute = false
         }
     }
     
@@ -182,7 +193,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     //handles toggling of play/pause button-----------------------------------
     @IBAction func playPauseButton(_ sender: UIButton) {
         audioPlayer.togglePlay(chord: enterChord())
-        for i in 0...numNotesInChord - 1 {
+        for i in 0...numNotesInChord {
             audioPlayer.changeVolume(note: i, volume: Float(volumeFloats[i]))
         }
     }
@@ -190,7 +201,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     
 //----------------------------------------------------------------------------------------------------------
-// Overriden Functions
+// initilization Functions
 //----------------------------------------------------------------------------------------------------------
     
     @IBOutlet weak var mainView: UIView!
@@ -202,6 +213,15 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     //make status bar white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    
+    //reset variables for new chord size
+    func resetVariables() {
+        audioPlayer = AudioPlayer(numNotes: numNotesInChord + 1)
+        toggleButtons.removeAll()
+        volumeFloats = Array(repeating: 0.5, count: numNotesInChord + 1)
+        volumeFloats[0] = 1.0
     }
     
     
@@ -224,16 +244,13 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         //setup scrollView
         view.addSubview(scrollView)
         view.bringSubview(toFront: playPauseRefrence)
+        
+        resetVariables()
     }
     
     
     //initialize variables and subviews (called after viewDidLoad)
     override func viewWillLayoutSubviews(){
-        
-        //reset variables for new chord size
-        toggleButtons.removeAll()
-        volumeFloats = Array(repeating: 0.5, count: numNotesInChord)
-        audioPlayer = AudioPlayer(numNotes: numNotesInChord)
         
         //This code will run in the main thread:
         DispatchQueue.main.async {

@@ -135,6 +135,7 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         mainVC?.numNotesInChord = 1 + picker.selectedRow(inComponent: 3)
         mainVC?.DroneTableView.reloadData()
         mainVC?.audioPlayer.togglePlay(chord: [])
+        mainVC?.resetVariables()
         mainVC?.viewWillLayoutSubviews()
         
         //dismiss popover
