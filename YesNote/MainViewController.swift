@@ -48,10 +48,10 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         self.performSegue(withIdentifier: "chordPopUp", sender: self)
     }
     @IBAction func rhythmSelector(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "chordPopUp", sender: self)
+        self.performSegue(withIdentifier: "rhythmSelector", sender: self)
     }
     @IBAction func tempoSelector(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "chordPopUp", sender: self)
+        self.performSegue(withIdentifier: "tempoSelector", sender: self)
     }
     
     
@@ -68,6 +68,26 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             destinationVC.popoverPresentationController?.sourceRect = CGRect(x: chordButton.frame.size.width/2, y: chordButton.frame.size.height, width: 0, height: 0)
             let frameSize = self.view.frame.width - 10
             destinationVC.preferredContentSize = CGSize(width: frameSize, height: frameSize)
+            
+            if let PopUp = destinationVC.popoverPresentationController{
+                PopUp.delegate = self
+            }
+        }
+        else if segue.identifier == "rhythmSelector" {
+            let destinationVC = segue.destination
+            destinationVC.popoverPresentationController?.sourceRect = CGRect(x: 40, y: 0, width: 0, height: 0)
+            let frameSize = self.view.frame.width - 10
+            destinationVC.preferredContentSize = CGSize(width: frameSize, height: frameSize)
+            
+            if let PopUp = destinationVC.popoverPresentationController{
+                PopUp.delegate = self
+            }
+        }
+        else if segue.identifier == "tempoSelector" {
+            let destinationVC = segue.destination
+            destinationVC.popoverPresentationController?.sourceRect = CGRect(x: 40, y: 0, width: 0, height: 0)
+            let frameSize = self.view.frame.width - 10
+            destinationVC.preferredContentSize = CGSize(width: frameSize, height: 175)
             
             if let PopUp = destinationVC.popoverPresentationController{
                 PopUp.delegate = self

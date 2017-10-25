@@ -17,9 +17,6 @@
         <array key="Rhyth.otf">
             <string>Rhythms</string>
         </array>
-        <array key="STAFCPE_.TTF">
-            <string>StaffClefPitchesEasy</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Main View Controller-->
@@ -129,13 +126,58 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp;=a=s=d=f=g=h=j=q=||" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQV-vV-Bqt">
-                                                <rect key="frame" x="5" y="30" width="311" height="80"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQV-vV-Bqt">
+                                                <rect key="frame" x="5" y="35" width="311" height="75"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="nQV-vV-Bqt" secondAttribute="height" multiplier="311:80" id="SSU-rd-zz7"/>
+                                                    <constraint firstAttribute="width" secondItem="nQV-vV-Bqt" secondAttribute="height" multiplier="311:80" constant="19.4375" id="SSU-rd-zz7"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="StaffClefPitchesEasy" family="StaffClefPitchesEasy" pointSize="34"/>
-                                                <nil key="textColor"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="&amp;=">
+                                                        <attributes>
+                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="a">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="=s=">
+                                                        <attributes>
+                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="d">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="=f=">
+                                                        <attributes>
+                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="g">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="=h=j=q=||">
+                                                        <attributes>
+                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       C       D       E       F       G       A       B       C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ki-og-ma3">
@@ -217,6 +259,9 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="rhythmSelector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Uc-dz-b0R"/>
+                                                            <segue destination="WoD-HR-IPG" kind="popoverPresentation" identifier="rhythmSelector" popoverAnchorView="xwH-ok-rg3" id="KH2-is-wgG">
+                                                                <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                                                            </segue>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsE-yO-2Id" customClass="UIBorderButton" customModule="YesNote" customModuleProvider="target">
@@ -241,6 +286,9 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="tempoSelector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPv-19-WNu"/>
+                                                            <segue destination="qgA-Yg-jpQ" kind="popoverPresentation" identifier="tempoSelector" popoverAnchorView="TsE-yO-2Id" id="V40-8x-h1G">
+                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                            </segue>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y70-aT-tMf" customClass="UIBorderButton" customModule="YesNote" customModuleProvider="target">
@@ -300,7 +348,7 @@
                                             <constraint firstItem="5Ki-og-ma3" firstAttribute="width" secondItem="nQV-vV-Bqt" secondAttribute="width" id="2Fc-f5-cwA"/>
                                             <constraint firstItem="web-Rn-0QR" firstAttribute="top" secondItem="5Ki-og-ma3" secondAttribute="bottom" constant="25" id="45g-oj-UBp"/>
                                             <constraint firstItem="e8E-bC-pm8" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" id="9v1-J1-5rj"/>
-                                            <constraint firstItem="nQV-vV-Bqt" firstAttribute="top" secondItem="rhM-iB-uZu" secondAttribute="top" constant="30" id="Ab7-IY-Iqk"/>
+                                            <constraint firstItem="nQV-vV-Bqt" firstAttribute="top" secondItem="rhM-iB-uZu" secondAttribute="top" constant="35" id="Ab7-IY-Iqk"/>
                                             <constraint firstItem="30X-tX-Rah" firstAttribute="centerX" secondItem="rhM-iB-uZu" secondAttribute="centerX" id="EbR-Km-cGx"/>
                                             <constraint firstItem="nQV-vV-Bqt" firstAttribute="centerX" secondItem="rhM-iB-uZu" secondAttribute="centerX" id="GQz-Th-3pq"/>
                                             <constraint firstItem="gPf-aw-ZWW" firstAttribute="leading" secondItem="rhM-iB-uZu" secondAttribute="leading" constant="10" id="IM6-K3-ST7"/>
@@ -392,6 +440,83 @@
             </objects>
             <point key="canvasLocation" x="-264.375" y="99.295774647887328"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="o5f-4e-hod">
+            <objects>
+                <viewController id="qgA-Yg-jpQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wjM-EL-dkV"/>
+                        <viewControllerLayoutGuide type="bottom" id="prP-wj-f5V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iHY-d1-NtM">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="175"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYy-yZ-Qww">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Dak-f3-Ajh"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="120 bpm">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuI-OR-xRO">
+                                <rect key="frame" x="135" y="125" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4Zk-yh-lRu"/>
+                                    <constraint firstAttribute="height" constant="50" id="kN8-U5-Cij"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="mdW-9e-hmC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="Ytd-Xp-mCf" eventType="touchUpInside" id="5Ds-MN-CCd"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WAx-bd-JtG">
+                                <rect key="frame" x="83" y="72.5" width="253" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cu-f6-hDa">
+                                <rect key="frame" x="10" y="77.5" width="60" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fTS-fK-eOV"/>
+                                    <constraint firstAttribute="width" constant="60" id="sup-Wq-xIQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LYy-yZ-Qww" secondAttribute="trailing" id="15h-n7-gar"/>
+                            <constraint firstItem="3cu-f6-hDa" firstAttribute="centerY" secondItem="iHY-d1-NtM" secondAttribute="centerY" id="2AC-qT-LFM"/>
+                            <constraint firstItem="WAx-bd-JtG" firstAttribute="leading" secondItem="3cu-f6-hDa" secondAttribute="trailing" constant="15" id="2Fz-Nd-gic"/>
+                            <constraint firstItem="LYy-yZ-Qww" firstAttribute="top" secondItem="wjM-EL-dkV" secondAttribute="bottom" id="8ef-Oh-64W"/>
+                            <constraint firstItem="UuI-OR-xRO" firstAttribute="centerX" secondItem="iHY-d1-NtM" secondAttribute="centerX" id="AZU-eM-xyL"/>
+                            <constraint firstItem="LYy-yZ-Qww" firstAttribute="leading" secondItem="iHY-d1-NtM" secondAttribute="leading" id="IG6-NR-Sfp"/>
+                            <constraint firstItem="3cu-f6-hDa" firstAttribute="leading" secondItem="iHY-d1-NtM" secondAttribute="leading" constant="10" id="T4P-Vr-QsN"/>
+                            <constraint firstItem="prP-wj-f5V" firstAttribute="top" secondItem="UuI-OR-xRO" secondAttribute="bottom" id="e6i-qK-owN"/>
+                            <constraint firstItem="WAx-bd-JtG" firstAttribute="trailing" secondItem="iHY-d1-NtM" secondAttribute="trailingMargin" id="eDS-k7-PMT"/>
+                            <constraint firstItem="WAx-bd-JtG" firstAttribute="centerY" secondItem="iHY-d1-NtM" secondAttribute="centerY" id="lJb-qb-tpO"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="350" height="175"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bth-xi-0Yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264.375" y="621.12676056338034"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="wr5-Pd-69G">
             <objects>
@@ -419,7 +544,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zv-sc-VIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="332"/>
+            <point key="canvasLocation" x="578" y="471"/>
         </scene>
         <!--Chord Select View Controller-->
         <scene sceneID="RZ7-IV-iO4">
@@ -434,9 +559,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvf-gs-KDn">
-                                <rect key="frame" x="0.0" y="300" width="350" height="50"/>
+                                <rect key="frame" x="135" y="300" width="80" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Kvf-gs-KDn" secondAttribute="height" multiplier="7:1" id="CpM-sU-hRs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="7we-7w-LEz"/>
+                                    <constraint firstAttribute="width" constant="80" id="9MC-00-Ma3"/>
+                                    <constraint firstAttribute="height" constant="50" id="efP-9u-Mpe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Done"/>
@@ -512,7 +639,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="BsK-ZJ-Q2j" secondAttribute="trailing" constant="-16.5" id="7cD-Iy-8Z4"/>
                             <constraint firstItem="hvx-dF-sTG" firstAttribute="leading" secondItem="JmU-Up-h3J" secondAttribute="leading" id="B2W-Cc-WIe"/>
                             <constraint firstItem="BsK-ZJ-Q2j" firstAttribute="top" secondItem="smF-EQ-yDf" secondAttribute="bottom" constant="-5" id="E07-Us-Rat"/>
-                            <constraint firstItem="Kvf-gs-KDn" firstAttribute="leading" secondItem="JmU-Up-h3J" secondAttribute="leading" id="JxO-63-qCj"/>
                             <constraint firstItem="e60-Wj-aGo" firstAttribute="baseline" secondItem="BsK-ZJ-Q2j" secondAttribute="baseline" id="Llq-lr-P6h"/>
                             <constraint firstItem="smF-EQ-yDf" firstAttribute="leading" secondItem="JmU-Up-h3J" secondAttribute="leading" id="N8t-aj-ZpU"/>
                             <constraint firstItem="ky7-zd-0m2" firstAttribute="top" secondItem="Kvf-gs-KDn" secondAttribute="bottom" id="OHS-Zq-XJe"/>
@@ -521,9 +647,9 @@
                             <constraint firstItem="e60-Wj-aGo" firstAttribute="top" secondItem="smF-EQ-yDf" secondAttribute="bottom" constant="-5" id="W9X-im-PeM"/>
                             <constraint firstItem="e60-Wj-aGo" firstAttribute="leading" secondItem="zyV-nq-mtx" secondAttribute="trailing" constant="8" id="Wx0-sO-JrN"/>
                             <constraint firstItem="e60-Wj-aGo" firstAttribute="top" secondItem="beE-uW-Y8n" secondAttribute="bottom" constant="55" id="XlC-Jp-I6i"/>
-                            <constraint firstAttribute="trailing" secondItem="Kvf-gs-KDn" secondAttribute="trailing" id="aAT-Ci-pT2"/>
                             <constraint firstItem="smF-EQ-yDf" firstAttribute="top" secondItem="beE-uW-Y8n" secondAttribute="bottom" id="cWY-Pg-V0P"/>
                             <constraint firstItem="zyV-nq-mtx" firstAttribute="top" secondItem="smF-EQ-yDf" secondAttribute="bottom" constant="-5" id="i3i-Kf-Ky5"/>
+                            <constraint firstItem="Kvf-gs-KDn" firstAttribute="centerX" secondItem="JmU-Up-h3J" secondAttribute="centerX" id="iIE-fH-HwF"/>
                             <constraint firstAttribute="trailing" secondItem="hvx-dF-sTG" secondAttribute="trailing" id="l4G-9O-m85"/>
                             <constraint firstItem="BsK-ZJ-Q2j" firstAttribute="leading" secondItem="C0b-fD-Lk6" secondAttribute="trailing" constant="6" id="nUb-ya-aV6"/>
                             <constraint firstItem="BsK-ZJ-Q2j" firstAttribute="top" secondItem="beE-uW-Y8n" secondAttribute="bottom" constant="55" id="rau-Ih-Xmc"/>
@@ -542,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcO-7K-bvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="579" y="-113"/>
+            <point key="canvasLocation" x="578" y="-16"/>
         </scene>
     </scenes>
     <resources>
