@@ -134,7 +134,7 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //updated info for main view to re-initialize
         mainVC?.numNotesInChord = 1 + picker.selectedRow(inComponent: 3)
         mainVC?.DroneTableView.reloadData()
-        mainVC?.audioPlayer.togglePlay(chord: [])
+        mainVC?.audioPlayer.togglePlay(tempo: 0.0, chord: [])
         mainVC?.resetVariables()
         mainVC?.viewWillLayoutSubviews()
         
