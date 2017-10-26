@@ -12,7 +12,13 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
    
     //num drone notes - no more than 8 interface builder doesn't like it
     var numNotesInChord = 3
-   
+    //stored chord picker ata
+    var row1 = 0
+    var row2 = 0
+    var row3 = 0
+    var row4 = 0
+    //stored rhythm selector data
+    var selectedRow = IndexPath(row: 0, section: 0)
     
     
     
@@ -36,11 +42,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var chordButton: UIButton!
     @IBOutlet weak var rhythmVolume: UIBorderButton!
     @IBOutlet weak var scaleLabel: UILabel!
-    //stored chord picker info
-    var row1 = 0
-    var row2 = 0
-    var row3 = 0
-    var row4 = 0
     
     
     //handle chord selector button press
