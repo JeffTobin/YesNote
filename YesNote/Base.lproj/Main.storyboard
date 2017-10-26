@@ -434,6 +434,7 @@
                         <outlet property="rhythmVolume" destination="y70-aT-tMf" id="qyd-G0-Yy3"/>
                         <outlet property="scaleLabel" destination="30X-tX-Rah" id="yHB-vi-rLg"/>
                         <outlet property="scrollView" destination="sSU-wq-hcL" id="Iin-Ms-2jY"/>
+                        <outlet property="tempoButtonReference" destination="TsE-yO-2Id" id="orH-SN-WSf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -483,7 +484,7 @@
                                     <action selector="handleDoneButtonPress:" destination="qgA-Yg-jpQ" eventType="touchUpInside" id="9MB-5a-yOj"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="50" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="WAx-bd-JtG">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="30" maxValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="WAx-bd-JtG">
                                 <rect key="frame" x="83" y="72.5" width="253" height="31"/>
                                 <connections>
                                     <action selector="handleTempoSliderChage:" destination="qgA-Yg-jpQ" eventType="valueChanged" id="4m5-IE-EHd"/>

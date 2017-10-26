@@ -16,7 +16,7 @@ class TempoPopupController: UIViewController {
     
     
     //formats tempo for display
-    func formatTempo(tempo: Float) -> NSAttributedString {
+    func formatToText(tempo: Float) -> String {
         
         //add "bpm" to string
         var bpmString = String(round(tempo))
@@ -24,23 +24,32 @@ class TempoPopupController: UIViewController {
         bpmString = bpmString.substring(to: endIndex)
         bpmString.append(" bpm")
         
+        return bpmString
+    }
+    
+    
+    func atributeText(text: String) -> NSAttributedString {
         //add underline to string
         let textAttributes = [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue]
-        let attributedString = NSAttributedString(string: bpmString, attributes: textAttributes)
+        let attributedString = NSAttributedString(string: text, attributes: textAttributes)
         
         return attributedString
     }
     
+    
     //assign tempo to display
     @IBAction func handleTempoSliderChage(_ sender: UISlider) {
-        bpmLabel.attributedText = formatTempo(tempo: tempoSliderRefernce.value)
+        bpmLabel.attributedText = atributeText(text: formatToText(tempo: tempoSliderRefernce.value))
     }
     
     
     @IBAction func handleDoneButtonPress(_ sender: UIButton) {
         
-        //store tempo
+        //store tempo and update button text
         mainVC?.tempo = round(tempoSliderRefernce.value)
+        var title = formatToText(tempo: tempoSliderRefernce.value)
+        title.append(" ▾")
+        mainVC?.tempoButtonReference.setTitle(title, for: .normal)
         
         //dismiss popover
         self.dismiss(animated: true, completion: nil)
@@ -52,7 +61,7 @@ class TempoPopupController: UIViewController {
         
         //restore tempo data
         let tempo = (mainVC?.tempo)!
-        bpmLabel.attributedText = formatTempo(tempo: tempo)
+        bpmLabel.attributedText = atributeText(text: formatToText(tempo: tempo))
         tempoSliderRefernce.value = tempo
     }
 }
