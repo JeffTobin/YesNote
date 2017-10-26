@@ -47,7 +47,7 @@ class AudioPlayer {
         oscillators[note]?.amplitude = Double(volume)
     }
     
-    func togglePlay(chord: [Int]) {                    //if playing, stop
+    func togglePlay(tempo: Float, chord: [Int]) {
 
         if playing == true {
             for osc in oscillators {
