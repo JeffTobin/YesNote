@@ -216,7 +216,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     //handles toggling of play/pause button-----------------------------------
     @IBAction func playPauseButton(_ sender: UIButton) {
-        audioPlayer.togglePlay(chord: enterChord())
+        audioPlayer.togglePlay(tempo: tempo, chord: enterChord())
         for i in 0...numNotesInChord {
             audioPlayer.changeVolume(note: i, volume: Float(volumeFloats[i]))
         }
