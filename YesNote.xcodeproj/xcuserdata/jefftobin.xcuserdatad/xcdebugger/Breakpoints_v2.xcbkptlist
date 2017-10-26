@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YesNote/MainViewController.swift"
-            timestampString = "530674454.441228"
+            timestampString = "530679122.634953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "playPauseButton(_:)"
             landmarkType = "7">
          </BreakpointContent>

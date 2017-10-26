@@ -180,7 +180,7 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       C       D       E       F       G       A       B       C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ki-og-ma3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       C       D       E       F       G       A       B       C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ki-og-ma3">
                                                 <rect key="frame" x="5" y="110" width="311" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="oMX-mM-CTS"/>
@@ -227,7 +227,7 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%8q. ry_\ eEE dffg\|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSh-L2-QSj">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%8q. ry_\ eEE dffg\|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSh-L2-QSj">
                                                         <rect key="frame" x="5" y="30" width="311" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="WM3-xM-RZl"/>
@@ -440,10 +440,10 @@
             </objects>
             <point key="canvasLocation" x="-264.375" y="99.295774647887328"/>
         </scene>
-        <!--View Controller-->
+        <!--Tempo Popup Controller-->
         <scene sceneID="o5f-4e-hod">
             <objects>
-                <viewController id="qgA-Yg-jpQ" sceneMemberID="viewController">
+                <viewController id="qgA-Yg-jpQ" customClass="TempoPopupController" customModule="YesNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wjM-EL-dkV"/>
                         <viewControllerLayoutGuide type="bottom" id="prP-wj-f5V"/>
@@ -480,10 +480,14 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneButton:" destination="Ytd-Xp-mCf" eventType="touchUpInside" id="5Ds-MN-CCd"/>
+                                    <action selector="handleDoneButtonPress:" destination="qgA-Yg-jpQ" eventType="touchUpInside" id="9MB-5a-yOj"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WAx-bd-JtG">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="50" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="WAx-bd-JtG">
                                 <rect key="frame" x="83" y="72.5" width="253" height="31"/>
+                                <connections>
+                                    <action selector="handleTempoSliderChage:" destination="qgA-Yg-jpQ" eventType="valueChanged" id="4m5-IE-EHd"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cu-f6-hDa">
                                 <rect key="frame" x="10" y="77.5" width="60" height="20"/>
@@ -511,6 +515,10 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="350" height="175"/>
+                    <connections>
+                        <outlet property="bpmLabel" destination="LYy-yZ-Qww" id="Ih6-xh-qfk"/>
+                        <outlet property="tempoSliderRefernce" destination="WAx-bd-JtG" id="JHD-aP-3Us"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bth-xi-0Yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

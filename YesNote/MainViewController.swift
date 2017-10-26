@@ -19,6 +19,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var row4 = 0
     //stored rhythm selector data
     var selectedRow = IndexPath(row: 0, section: 0)
+    //stored tempo data
+    var tempo : Float = 120.0
     
     
     
