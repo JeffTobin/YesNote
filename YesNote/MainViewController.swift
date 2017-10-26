@@ -244,7 +244,13 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         audioPlayer = AudioPlayer(numNotes: numNotesInChord + 1)
         toggleButtons.removeAll()
         volumeFloats = Array(repeating: 0.5, count: numNotesInChord + 1)
-        volumeFloats[0] = 1.0
+        
+        if RhythmvolMute == false {
+            volumeFloats[0] = 1.0
+        }
+        else {
+            volumeFloats[0] = 0.0
+        }
     }
     
     
