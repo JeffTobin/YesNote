@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -134,46 +134,46 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="&amp;=">
                                                         <attributes>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" size="34" name=".SFNSDisplay"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="a">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" size="34" name=".SFNSDisplay"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="=s=">
                                                         <attributes>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" size="34" name=".SFNSDisplay"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="d">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" size="34" name=".SFNSDisplay"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="=f=">
                                                         <attributes>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" size="34" name=".SFNSDisplay"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="g">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" size="34" name=".SFNSDisplay"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="=h=j=q=||">
                                                         <attributes>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" size="34" name=".SFNSDisplay"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>

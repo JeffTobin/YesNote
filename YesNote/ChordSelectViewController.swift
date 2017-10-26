@@ -10,7 +10,7 @@ import UIKit
 
 class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    let scales = ["Ionian","Dorian","Phrygian","Lydian","Mixolydian","Aeloian","Locrian"]
+    let scales = ["Ionian","Dorian","Phrygian","Lydian","Mixolydian","Aeolian","Locrian"]
     let roots = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
     
     
