@@ -167,20 +167,19 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         mainVC?.scaleLabel.text = scaleText as String
         
         //assign modeNoteLabel
-        var modeNotesString = ""
+        var modeNotesString = "       "
         for note in modeNotes! {
             let noteString = roots[note]
-            
+            modeNotesString.append(noteString)
             if noteString.count == 2 {
                 modeNotesString.append("     ")
             }
             else {
                 modeNotesString.append("       ")
             }
-            modeNotesString.append(noteString)
         }
         let lastNote = roots[modeNotes![0]]
-        modeNotesString.append("       \(lastNote)")
+        modeNotesString.append(lastNote)
         mainVC?.modeNoteLabel.text = modeNotesString
         
         //assign scaleNotationLabel

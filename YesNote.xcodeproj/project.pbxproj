@@ -19,6 +19,8 @@
 		3F67CD801FA1767400CACC87 /* TempoPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67CD7F1FA1767400CACC87 /* TempoPopupController.swift */; };
 		3F7A893E1F910F8B00E6AF2E /* ChordSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */; };
 		3FAAF07B1FA29B0700794A2F /* ScaleChordLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */; };
+		3FB462FB1FA37B3C0092DBA7 /* Rhythm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB462FA1FA37B3C0092DBA7 /* Rhythm.swift */; };
+		3FB462FD1FA37B930092DBA7 /* QuarterNotes.mid in Resources */ = {isa = PBXBuildFile; fileRef = 3FB462FC1FA37B930092DBA7 /* QuarterNotes.mid */; };
 		3FC3C4731F9FA38900E3262D /* UIBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */; };
 		3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */; };
 		3FC674541F99614600E2A352 /* RhythmsDownStem.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */; };
@@ -57,6 +59,8 @@
 		3F67CD7F1FA1767400CACC87 /* TempoPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoPopupController.swift; sourceTree = "<group>"; };
 		3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordSelectViewController.swift; sourceTree = "<group>"; };
 		3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleChordLogic.swift; sourceTree = "<group>"; };
+		3FB462FA1FA37B3C0092DBA7 /* Rhythm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rhythm.swift; sourceTree = "<group>"; };
+		3FB462FC1FA37B930092DBA7 /* QuarterNotes.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = QuarterNotes.mid; path = YesNote/QuarterNotes.mid; sourceTree = "<group>"; };
 		3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderButton.swift; sourceTree = "<group>"; };
 		3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StaffClefPitchesEasy.suit; sourceTree = "<group>"; };
 		3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhythmsDownStem.otf; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		179296831DF0EA3D00273528 = {
 			isa = PBXGroup;
 			children = (
+				3FB462FC1FA37B930092DBA7 /* QuarterNotes.mid */,
 				3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */,
 				1792968E1DF0EA3E00273528 /* YesNote */,
 				1792968D1DF0EA3E00273528 /* Products */,
@@ -102,6 +107,7 @@
 				1792968F1DF0EA3E00273528 /* AppDelegate.swift */,
 				179296911DF0EA3E00273528 /* MainViewController.swift */,
 				3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */,
+				3FB462FA1FA37B3C0092DBA7 /* Rhythm.swift */,
 				3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */,
 				3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */,
 				3FC674581F997FB600E2A352 /* CellTableViewCell.swift */,
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB462FD1FA37B930092DBA7 /* QuarterNotes.mid in Resources */,
 				3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */,
 				3FC674551F99614600E2A352 /* STAFCP__.TTF in Resources */,
 				3FC674561F99614600E2A352 /* STAFCPE_.TTF in Resources */,
@@ -219,6 +226,7 @@
 				179296901DF0EA3E00273528 /* AppDelegate.swift in Sources */,
 				3FC3C4731F9FA38900E3262D /* UIBorderButton.swift in Sources */,
 				3FAAF07B1FA29B0700794A2F /* ScaleChordLogic.swift in Sources */,
+				3FB462FB1FA37B3C0092DBA7 /* Rhythm.swift in Sources */,
 				3F1F0C5B1F9A4811006A7EED /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,6 +30,9 @@ class RhythmPopupController: UITableViewController {
         //store result
         mainVC?.selectedRow = indexPath
         
+        mainVC?.rhythmObj.setRhythm(rhythmChoice: indexPath.row)
+        mainVC?.rhythmNotationLabel.text = mainVC?.rhythmObj.getRhythm().font
+        
         //dismiss popover on main thread
         DispatchQueue.main.async {
             self.dismiss(animated: true, completion: nil)

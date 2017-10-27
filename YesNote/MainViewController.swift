@@ -45,9 +45,11 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var rhythmVolume: UIBorderButton!
     @IBOutlet weak var scaleLabel: UILabel!
     @IBOutlet weak var tempoButtonReference: UIButton!
-    @IBOutlet weak var scaleNotationLabel: UILabel!
     @IBOutlet weak var modeNoteLabel: UILabel!
+    @IBOutlet weak var scaleNotationLabel: UILabel!
+    @IBOutlet weak var rhythmNotationLabel: UILabel!
     var scaleChordLogic = ScaleChordLogic()
+    var rhythmObj = Rhythm()
     
     
     //handle chord selector button press

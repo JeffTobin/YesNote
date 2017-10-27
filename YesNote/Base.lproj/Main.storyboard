@@ -132,49 +132,49 @@
                                                     <constraint firstAttribute="width" secondItem="nQV-vV-Bqt" secondAttribute="height" multiplier="311:80" constant="19.4375" id="SSU-rd-zz7"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="&amp;=">
+                                                    <fragment content="&amp;">
                                                         <attributes>
                                                             <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="a">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="=s=">
                                                         <attributes>
                                                             <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="d">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="=f=">
                                                         <attributes>
                                                             <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="g">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="=h=j=q=||">
+                                                    <fragment content="=h=j=q||">
                                                         <attributes>
                                                             <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -227,7 +227,7 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%8q. ry_\ eEE dffg\|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSh-L2-QSj">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%8q. ry_\ eEE dffg\|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSh-L2-QSj">
                                                         <rect key="frame" x="5" y="30" width="311" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="WM3-xM-RZl"/>
@@ -431,10 +431,11 @@
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="g08-s9-i8x"/>
                         <outlet property="modeNoteLabel" destination="5Ki-og-ma3" id="S0b-Lj-CmJ"/>
                         <outlet property="playPauseRefrence" destination="FGA-Io-KJ3" id="NdC-AN-Z1M"/>
+                        <outlet property="rhythmNotationLabel" destination="sSh-L2-QSj" id="vPT-GF-8Rc"/>
                         <outlet property="rhythmView" destination="UhG-wg-YiK" id="2IL-aE-dO1"/>
                         <outlet property="rhythmVolume" destination="y70-aT-tMf" id="qyd-G0-Yy3"/>
                         <outlet property="scaleLabel" destination="30X-tX-Rah" id="yHB-vi-rLg"/>
-                        <outlet property="scaleNotationLabel" destination="nQV-vV-Bqt" id="LI2-k4-AX9"/>
+                        <outlet property="scaleNotationLabel" destination="nQV-vV-Bqt" id="7gM-34-gnx"/>
                         <outlet property="scrollView" destination="sSU-wq-hcL" id="Iin-Ms-2jY"/>
                         <outlet property="tempoButtonReference" destination="TsE-yO-2Id" id="orH-SN-WSf"/>
                     </connections>
