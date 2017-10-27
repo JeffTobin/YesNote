@@ -45,6 +45,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var rhythmVolume: UIBorderButton!
     @IBOutlet weak var scaleLabel: UILabel!
     @IBOutlet weak var tempoButtonReference: UIButton!
+    var scaleChordLogic = ScaleChordLogic()
     
     
     //handle chord selector button press

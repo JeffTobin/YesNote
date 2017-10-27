@@ -18,6 +18,7 @@
 		3F5FBDB21FA12DFD00D873DF /* RhythmPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FBDB11FA12DFD00D873DF /* RhythmPopupController.swift */; };
 		3F67CD801FA1767400CACC87 /* TempoPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67CD7F1FA1767400CACC87 /* TempoPopupController.swift */; };
 		3F7A893E1F910F8B00E6AF2E /* ChordSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */; };
+		3FAAF07B1FA29B0700794A2F /* ScaleChordLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */; };
 		3FC3C4731F9FA38900E3262D /* UIBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */; };
 		3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */; };
 		3FC674541F99614600E2A352 /* RhythmsDownStem.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */; };
@@ -55,6 +56,7 @@
 		3F5FBDB11FA12DFD00D873DF /* RhythmPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhythmPopupController.swift; sourceTree = "<group>"; };
 		3F67CD7F1FA1767400CACC87 /* TempoPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoPopupController.swift; sourceTree = "<group>"; };
 		3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordSelectViewController.swift; sourceTree = "<group>"; };
+		3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleChordLogic.swift; sourceTree = "<group>"; };
 		3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderButton.swift; sourceTree = "<group>"; };
 		3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StaffClefPitchesEasy.suit; sourceTree = "<group>"; };
 		3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhythmsDownStem.otf; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				1792968F1DF0EA3E00273528 /* AppDelegate.swift */,
 				179296911DF0EA3E00273528 /* MainViewController.swift */,
+				3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */,
 				3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */,
 				3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */,
 				3FC674581F997FB600E2A352 /* CellTableViewCell.swift */,
@@ -215,6 +218,7 @@
 				179296921DF0EA3E00273528 /* MainViewController.swift in Sources */,
 				179296901DF0EA3E00273528 /* AppDelegate.swift in Sources */,
 				3FC3C4731F9FA38900E3262D /* UIBorderButton.swift in Sources */,
+				3FAAF07B1FA29B0700794A2F /* ScaleChordLogic.swift in Sources */,
 				3F1F0C5B1F9A4811006A7EED /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
