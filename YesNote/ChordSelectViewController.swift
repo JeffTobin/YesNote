@@ -154,8 +154,8 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let p1 = roots [r1]
         let p2 = scales[r2]
         
-        let noteNum = mainVC?.scaleChordLogic.getMode(rt: p1, md: p2)[r3]
-        let p3 = roots[noteNum!]
+        let modeNotes = mainVC?.scaleChordLogic.getMode(rt: p1, md: p2)
+        let p3 = roots[modeNotes![r3]]
         
         let chordstext = mainVC?.scaleChordLogic.getChordList(mname: p2, croot: r3)
         let p4 = chordstext![r4]
@@ -165,6 +165,26 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let scaleText = p1 + " " + p2
         mainVC?.chordButton.setTitle(chordText as String, for: .normal)
         mainVC?.scaleLabel.text = scaleText as String
+        
+        //assign modeNoteLabel
+        var modeNotesString = ""
+        for note in modeNotes! {
+            let noteString = roots[note]
+            
+            if noteString.count == 2 {
+                modeNotesString.append("     ")
+            }
+            else {
+                modeNotesString.append("       ")
+            }
+            modeNotesString.append(noteString)
+        }
+        let lastNote = roots[modeNotes![0]]
+        modeNotesString.append("       \(lastNote)")
+        mainVC?.modeNoteLabel.text = modeNotesString
+        
+        //assign scaleNotationLabel
+        mainVC?.scaleNotationLabel.text = mainVC?.scaleChordLogic.getStaff(r: p1, m: p2)
         
         //updated info for main view to re-initialize
         mainVC?.numNotesInChord = (mainVC?.scaleChordLogic.getChord(pre: p3, suf: p4).count)!

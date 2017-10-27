@@ -429,10 +429,12 @@
                         <outlet property="DroneTableView" destination="e8E-bC-pm8" id="3zu-Ei-kf3"/>
                         <outlet property="chordButton" destination="UND-OZ-yBR" id="hyA-Lr-lV8"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="g08-s9-i8x"/>
+                        <outlet property="modeNoteLabel" destination="5Ki-og-ma3" id="S0b-Lj-CmJ"/>
                         <outlet property="playPauseRefrence" destination="FGA-Io-KJ3" id="NdC-AN-Z1M"/>
                         <outlet property="rhythmView" destination="UhG-wg-YiK" id="2IL-aE-dO1"/>
                         <outlet property="rhythmVolume" destination="y70-aT-tMf" id="qyd-G0-Yy3"/>
                         <outlet property="scaleLabel" destination="30X-tX-Rah" id="yHB-vi-rLg"/>
+                        <outlet property="scaleNotationLabel" destination="nQV-vV-Bqt" id="LI2-k4-AX9"/>
                         <outlet property="scrollView" destination="sSU-wq-hcL" id="Iin-Ms-2jY"/>
                         <outlet property="tempoButtonReference" destination="TsE-yO-2Id" id="orH-SN-WSf"/>
                     </connections>

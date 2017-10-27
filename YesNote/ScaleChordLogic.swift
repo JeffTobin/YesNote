@@ -70,6 +70,8 @@ class ScaleChordLogic {
                      ["minor", "m7", "m9", "m11", "m13", "sus2", "sus4", "7sus4"],
                      ["dim"]]
     
+    let note_staff_names = [ "a", "A", "s", "S", "d", "f", "F", "g", "G", "h", "H", "j", "q", "Q", "w", "W", "e", "r", "R", "t", "T", "y", "Y", "u"]
+    
     // shifts a integer representing a note by a given shift amount
     func shift(root: Int, sham: Int) -> Int {
         return (root + sham) % 12
@@ -120,5 +122,25 @@ class ScaleChordLogic {
     func getChordList(mname: String, croot: Int) -> Array<String>{
         let tmp = shiftChords(mod: modes[mname]!)
         return tmp[croot]
+    }
+    
+    func getStaff(r: String, m: String) -> String{
+        let tmp = getMode(rt: r, md: m)
+        var staff = "&"
+        for n in tmp{
+            if (n < tmp[0]){
+                staff.append(note_staff_names[n+12])
+            }
+            else{
+                staff.append(note_staff_names[n])
+            }
+            let test = staff.lowercased()
+            if (test.last == staff.last){
+                staff.append("=")
+            }
+        }
+        staff.append(note_staff_names[tmp[0]+12])
+        staff.append("||")
+        return staff
     }
 }
