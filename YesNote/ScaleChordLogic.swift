@@ -143,4 +143,18 @@ class ScaleChordLogic {
         staff.append("||")
         return staff
     }
+    
+    func getChordInStaff(r: String, c: String) -> String{
+        let tmp = getChord(pre: r, suf: c)
+        var staff = ""
+        for n in tmp{
+            if (n < tmp[0]){
+                staff.append(note_staff_names[n+12])
+            }
+            else{
+                staff.append(note_staff_names[n])
+            }
+        }
+        return staff
+    }
 }

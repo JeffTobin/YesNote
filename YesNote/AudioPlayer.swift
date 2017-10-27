@@ -43,8 +43,13 @@ class AudioPlayer {
         AudioKit.start()                               //initiate audio output source
     }
     
-    func changeVolume(note: Int, volume: Float) {      //drone volume
-        oscillators[note]?.amplitude = Double(volume)
+    func changeVolume(index: Int, volume: Float) {      //change volume
+        if index == 0 {
+            //change rhythm volume here
+        }
+        else {
+            oscillators[index - 1]?.amplitude = Double(volume)
+        }
     }
     
     func togglePlay(tempo: Float, chord: [Int]) {

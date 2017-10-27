@@ -51,6 +51,9 @@ class TempoPopupController: UIViewController {
         title.append(" ▾")
         mainVC?.tempoButtonReference.setTitle(title, for: .normal)
         
+        //pause drones
+        mainVC?.audioPlayer.togglePlay(tempo: 0.0, chord: [])
+        
         //dismiss popover
         self.dismiss(animated: true, completion: nil)
     }

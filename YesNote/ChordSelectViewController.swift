@@ -138,17 +138,11 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
     //handle done button press-----------------------------------------------
     @IBAction func doneButton(_ sender: UIButton) {
         
-        //retrieve last known row position values
+        //retrieve row position values
         let r1 = picker.selectedRow(inComponent: 0)
         let r2 = picker.selectedRow(inComponent: 1)
         let r3 = picker.selectedRow(inComponent: 2)
         let r4 = picker.selectedRow(inComponent: 3)
-        
-        //store row data for defaults values next load
-        mainVC?.row1 = r1
-        mainVC?.row2 = r2
-        mainVC?.row3 = r3
-        mainVC?.row4 = r4
         
         //assign position values to strings
         let p1 = roots [r1]
@@ -159,6 +153,14 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         let chordstext = mainVC?.scaleChordLogic.getChordList(mname: p2, croot: r3)
         let p4 = chordstext![r4]
+        
+        //store row data for defaults values next load
+        mainVC?.row1 = r1
+        mainVC?.row2 = r2
+        mainVC?.row3 = r3
+        mainVC?.row4 = r4
+        mainVC?.row3String = p3
+        mainVC?.row4String = p4
         
         //assign row content to UI text
         let chordText = p3 + " " + p4 + " ▾"
@@ -182,8 +184,16 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
         modeNotesString.append(lastNote)
         mainVC?.modeNoteLabel.text = modeNotesString
         
-        //assign scaleNotationLabel
-        mainVC?.scaleNotationLabel.text = mainVC?.scaleChordLogic.getStaff(r: p1, m: p2)
+        //assign scaleNotationLabel and scale notation highlighting
+        let scaleString = (mainVC?.scaleChordLogic.getStaff(r: p1, m: p2))!
+        let scaleAttributedString = NSMutableAttributedString(string: scaleString)
+        let backgrooundColor = UIColor(red:0.00, green:0.59, blue:1.00, alpha:0.3)
+        for (index, letter) in scaleString.enumerated() {
+            if (mainVC?.scaleChordLogic.getChordInStaff(r: p3, c: p4).contains(letter))! {
+                scaleAttributedString.addAttribute(NSBackgroundColorAttributeName, value: backgrooundColor, range: NSRange(location: index, length: 1))
+            }
+        }
+        mainVC?.scaleNotationLabel.attributedText = scaleAttributedString
         
         //updated info for main view to re-initialize
         mainVC?.numNotesInChord = (mainVC?.scaleChordLogic.getChord(pre: p3, suf: p4).count)!

@@ -140,7 +140,7 @@
                                                     </fragment>
                                                     <fragment content="a">
                                                         <attributes>
-                                                            <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.58823529411764708" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
