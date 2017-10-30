@@ -300,8 +300,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
         
         //adjust scrolling height
-        if self.DroneTableView.contentSize.height > 138 {
-            let scrollHeight = (self.view.frame.height + self.DroneTableView.contentSize.height) - 202
+        if self.DroneTableView.contentSize.height > mainView.frame.height - 430 {
+            let scrollHeight = (self.DroneTableView.contentSize.height + 366)
             scrollView.contentSize = CGSize(width:self.view.frame.width, height: scrollHeight)
         }
         else{
