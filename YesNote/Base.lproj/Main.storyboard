@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -135,46 +135,46 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="&amp;">
                                                         <attributes>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" metaFont="system" size="34"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="a">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58823529411764708" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" metaFont="system" size="34"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="=s=">
                                                         <attributes>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" metaFont="system" size="34"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="d">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" metaFont="system" size="34"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="=f=">
                                                         <attributes>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" metaFont="system" size="34"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="g">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.2967412243150685" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" metaFont="system" size="34"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="=h=j=q||">
                                                         <attributes>
-                                                            <font key="NSFont" size="34" name="StaffClefPitchesEasy"/>
+                                                            <font key="NSFont" metaFont="system" size="34"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="0.94999999999999996" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -402,6 +402,7 @@
                                 </constraints>
                                 <state key="normal" image="playPause"/>
                                 <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1V-Cm-akT"/>
                                     <action selector="playPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQb-2n-c9I"/>
                                 </connections>
                             </button>
@@ -680,11 +681,11 @@
                                         <rect key="frame" x="0.0" y="352" width="350" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9dG-YO-8WM" id="k3Y-1E-KQG">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Nine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1pP-Mh-67M">
-                                                    <rect key="frame" x="15" y="0.0" width="320" height="44.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="320" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -697,11 +698,11 @@
                                         <rect key="frame" x="0.0" y="396" width="350" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hLz-lH-T2X" id="W19-4d-4Hc">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Ten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dpa-hu-ImM">
-                                                    <rect key="frame" x="15" y="0.0" width="320" height="44.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="320" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

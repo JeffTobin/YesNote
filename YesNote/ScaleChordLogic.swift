@@ -63,8 +63,8 @@ class ScaleChordLogic {
                     "dim": [0, 3, 6]]
     
     let mi_chords = [["major", "maj7", "maj9", "maj13", "add6", "6/9", "sus2", "sus4"],
-                     ["minor", "m7", "m9", "m13", "11", "sus2", "sus4", "7sus4"],
-                     ["minor", "m7", "11", "sus2", "sus4"],
+                     ["minor", "m7", "m9", "m13", "sus2", "sus4", "7sus4"],
+                     ["minor", "m7", "sus2", "sus4"],
                      ["major", "maj7", "maj9", "add6", "6/9", "sus2"],
                      ["major", "7", "9", "11", "13", "6/9", "sus2", "sus4", "7sus4"],
                      ["minor", "m7", "m9", "m11", "m13", "sus2", "sus4", "7sus4"],
@@ -148,12 +148,8 @@ class ScaleChordLogic {
         let tmp = getChord(pre: r, suf: c)
         var staff = ""
         for n in tmp{
-            if (n < tmp[0]){
                 staff.append(note_staff_names[n+12])
-            }
-            else{
                 staff.append(note_staff_names[n])
-            }
         }
         return staff
     }
