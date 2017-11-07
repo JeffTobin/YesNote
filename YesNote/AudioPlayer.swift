@@ -24,6 +24,8 @@ class AudioPlayer {
     var oscillators = [Int: AKOscillator]()             //instruments that play drones
     var playing = false                                 //controls mute button
     var _numNotes = 0                                   //number of notes in the selected chord
+    var myMidiPlayer = MidiPlayer()                     //MidiPlayer Object
+    
                                                         //https://pages.mtu.edu/~suits/notefreqs.html
     var frequencies = [0: 261.63, 1: 277.18, 2: 293.66, 3: 311.13, 4: 329.63, 5: 349.23, 6: 369.99, 7: 392.00, 8: 415.30, 9: 440.00, 10: 466.16, 11: 493.88]                 //12 notes of the chromatic scale (basically all notes)
     var outputArray = {(source: [Int: AKOscillator]) -> [AKOscillator] in
@@ -41,6 +43,13 @@ class AudioPlayer {
         }
         AudioKit.output = AKMixer(outputArray(oscillators))
         AudioKit.start()                               //initiate audio output source
+        
+        //begin midi
+        myMidiPlayer.musicSequence = myMidiPlayer.createMusicSequence()
+        myMidiPlayer.createAVMIDIPlayer((myMidiPlayer.musicSequence)!)
+        myMidiPlayer.createAVMIDIPlayerFromMIDIFIle()
+        myMidiPlayer.musicPlayer = myMidiPlayer.createMusicPlayer((myMidiPlayer.musicSequence)!)
+        //end midi
     }
     
     func changeVolume(index: Int, volume: Float) {      //change volume
@@ -58,6 +67,7 @@ class AudioPlayer {
             for osc in oscillators {
                 osc.value.stop()
             }
+            myMidiPlayer.playMidi()
             playing = false
         }
         else if chord.count != 0 {
@@ -67,6 +77,8 @@ class AudioPlayer {
                 osc.value.start()                                   //if stopped, play
             }
             playing = true
+            myMidiPlayer.tempoConverted = tempo/(myMidiPlayer.tempoDivider)
+            myMidiPlayer.playMidi()
         }
         else {
                                                        //nothing to see here just a bug fix

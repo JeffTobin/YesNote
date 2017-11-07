@@ -13,7 +13,7 @@
 		179296971DF0EA3E00273528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179296961DF0EA3E00273528 /* Assets.xcassets */; };
 		1792969A1DF0EA3E00273528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179296981DF0EA3E00273528 /* LaunchScreen.storyboard */; };
 		239AF1B01FAB60150074CFDA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 239AF1AF1FAB60150074CFDA /* README.md */; };
-		239AF1B21FAB61CD0074CFDA /* Midi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239AF1B11FAB61CD0074CFDA /* Midi.swift */; };
+		239AF1B21FAB61CD0074CFDA /* MidiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239AF1B11FAB61CD0074CFDA /* MidiPlayer.swift */; };
 		3F1F0C571F9A3A5E006A7EED /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */; };
 		3F1F0C581F9A3A5E006A7EED /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F1F0C5B1F9A4811006A7EED /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */; };
@@ -57,7 +57,7 @@
 		179296991DF0EA3E00273528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1792969B1DF0EA3E00273528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		239AF1AF1FAB60150074CFDA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		239AF1B11FAB61CD0074CFDA /* Midi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Midi.swift; sourceTree = "<group>"; };
+		239AF1B11FAB61CD0074CFDA /* MidiPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiPlayer.swift; sourceTree = "<group>"; };
 		3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		3F5FBDB11FA12DFD00D873DF /* RhythmPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhythmPopupController.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				179296911DF0EA3E00273528 /* MainViewController.swift */,
 				3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */,
 				3FB462FA1FA37B3C0092DBA7 /* Rhythm.swift */,
-				239AF1B11FAB61CD0074CFDA /* Midi.swift */,
+				239AF1B11FAB61CD0074CFDA /* MidiPlayer.swift */,
 				3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */,
 				3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */,
 				3FC674581F997FB600E2A352 /* CellTableViewCell.swift */,
@@ -232,7 +232,7 @@
 				3F67CD801FA1767400CACC87 /* TempoPopupController.swift in Sources */,
 				3F7A893E1F910F8B00E6AF2E /* ChordSelectViewController.swift in Sources */,
 				3F5FBDB21FA12DFD00D873DF /* RhythmPopupController.swift in Sources */,
-				239AF1B21FAB61CD0074CFDA /* Midi.swift in Sources */,
+				239AF1B21FAB61CD0074CFDA /* MidiPlayer.swift in Sources */,
 				3FC674591F997FB600E2A352 /* CellTableViewCell.swift in Sources */,
 				179296921DF0EA3E00273528 /* MainViewController.swift in Sources */,
 				179296901DF0EA3E00273528 /* AppDelegate.swift in Sources */,

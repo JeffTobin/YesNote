@@ -103,7 +103,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var volumeFloats = [Float]()
     var RhythmvolMute = false
     var audioPlayer : AudioPlayer!
-    var myMidiPlayer = MidiPlayer()
     
     
     //number of drone note rows----------------------------------------------
@@ -216,7 +215,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         for i in 0...numNotesInChord {
             audioPlayer.changeVolume(index: i, volume: Float(volumeFloats[i]))
         }
-        myMidiPlayer.playMidi()
     }
     
     
@@ -273,14 +271,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         view.bringSubview(toFront: playPauseRefrence)
         
         resetVariables()
-        
-        //begin midi
-        super.viewDidLoad()
-        myMidiPlayer.musicSequence = myMidiPlayer.createMusicSequence()
-        myMidiPlayer.createAVMIDIPlayer((myMidiPlayer.musicSequence)!)
-        myMidiPlayer.createAVMIDIPlayerFromMIDIFIle()
-        myMidiPlayer.musicPlayer = myMidiPlayer.createMusicPlayer((myMidiPlayer.musicSequence)!)
-        //end midi
     }
     
     

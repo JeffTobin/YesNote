@@ -40,8 +40,6 @@ class TempoPopupController: UIViewController {
     //assign tempo to display
     @IBAction func handleTempoSliderChage(_ sender: UISlider) {
         bpmLabel.attributedText = atributeText(text: formatToText(tempo: tempoSliderRefernce.value))
-        mainVC?.myMidiPlayer.tempoConverted = sender.value/(mainVC?.myMidiPlayer.tempoDivider)!
-        print(mainVC?.myMidiPlayer.tempoConverted)
     }
     
     
