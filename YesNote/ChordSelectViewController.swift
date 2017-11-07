@@ -12,24 +12,6 @@ class ChordSelectViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     let scales = ["Ionian","Dorian","Phrygian","Lydian","Mixolydian","Aeolian","Locrian"]
     let roots = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
-    
-    
-    
-    
-    //placeholders----------------------------------------------------------------------------------------------
-    func testFunc(row1: Int, row2: Int, row3: Int) -> [String]{
-        if row3 % 2 == 0{
-            return ["1","2","3","4","5"]
-        }
-        else{
-            return ["One","Two","Three"]
-        }
-    }
-    //----------------------------------------------------------------------------------------------------------
-
-    
-    
-    
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var selectionLabel: UILabel!
     let mainVC = UIApplication.shared.keyWindow?.rootViewController as! MainViewController?

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import AVFoundation
 
-class MidiImport {
+class MidiPlayer {
     //begin Jeff's Midi Player // this one is from a midi file
     var midiPlayer:AVMIDIPlayer?
     var loop = false

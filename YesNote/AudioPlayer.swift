@@ -62,14 +62,10 @@ class AudioPlayer {
         }
         else if chord.count != 0 {
             for osc in oscillators {
-                osc.value.amplitude = Double(0.5)      //default volume
-            }                                          //set frequency of each oscilator to chord tones
-            for (index, osc) in oscillators.enumerated() {
-                osc.value.frequency = frequencies[chord[index]]!
+                osc.value.amplitude = Double(0.5)                   //default volume
+                osc.value.frequency = frequencies[chord[osc.key]]!    //set frequency of each oscilator to chord tones
+                osc.value.start()                                   //if stopped, play
             }
-            for osc in oscillators {                   //if stopped, play
-                osc.value.start()
-            } 
             playing = true
         }
         else {

@@ -9,10 +9,6 @@
 import UIKit
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDataSource {
-   
-    var myMidiPlayer = MidiImport()
-    
-    
     //num drone notes - no more than 8 interface builder doesn't like it
     var numNotesInChord = 3
     //stored chord picker ata
@@ -28,23 +24,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var tempo : Float = 120.0
     //root notes
     let roots = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
-    
-    //midi function!!!
-    @IBAction func play(_ sender: AnyObject) {
-        myMidiPlayer.playMidi()
-    }
-    
-    //placeholders----------------------------------------------------------------------------------------------
-    func enterChord()->[Int] {
-        var notes = Array(repeating: 0, count: numNotesInChord + 1)
-        
-        for i in 0...numNotesInChord {
-            notes[i] = (Int(arc4random_uniform(11)))
-        }
-        return notes
-    }
-    //----------------------------------------------------------------------------------------------------------
-    
     
     
     
@@ -124,6 +103,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var volumeFloats = [Float]()
     var RhythmvolMute = false
     var audioPlayer : AudioPlayer!
+    var myMidiPlayer = MidiPlayer()
     
     
     //number of drone note rows----------------------------------------------
@@ -236,6 +216,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         for i in 0...numNotesInChord {
             audioPlayer.changeVolume(index: i, volume: Float(volumeFloats[i]))
         }
+        myMidiPlayer.playMidi()
     }
     
     

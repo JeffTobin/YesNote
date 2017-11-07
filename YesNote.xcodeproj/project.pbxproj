@@ -14,8 +14,6 @@
 		1792969A1DF0EA3E00273528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179296981DF0EA3E00273528 /* LaunchScreen.storyboard */; };
 		239AF1B01FAB60150074CFDA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 239AF1AF1FAB60150074CFDA /* README.md */; };
 		239AF1B21FAB61CD0074CFDA /* Midi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239AF1B11FAB61CD0074CFDA /* Midi.swift */; };
-		239AF1B71FAB64310074CFDA /* sibeliusGMajor.mid in Resources */ = {isa = PBXBuildFile; fileRef = 239AF1B61FAB64310074CFDA /* sibeliusGMajor.mid */; };
-		239AF1BA1FAC9E2D0074CFDA /* GeneralUser GS MuseScore v1.442.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 239AF1B91FAC9E2D0074CFDA /* GeneralUser GS MuseScore v1.442.sf2 */; };
 		3F1F0C571F9A3A5E006A7EED /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */; };
 		3F1F0C581F9A3A5E006A7EED /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F1F0C5B1F9A4811006A7EED /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */; };
@@ -24,7 +22,6 @@
 		3F7A893E1F910F8B00E6AF2E /* ChordSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */; };
 		3FAAF07B1FA29B0700794A2F /* ScaleChordLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */; };
 		3FB462FB1FA37B3C0092DBA7 /* Rhythm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB462FA1FA37B3C0092DBA7 /* Rhythm.swift */; };
-		3FB462FD1FA37B930092DBA7 /* QuarterNotes.mid in Resources */ = {isa = PBXBuildFile; fileRef = 3FB462FC1FA37B930092DBA7 /* QuarterNotes.mid */; };
 		3FC3C4731F9FA38900E3262D /* UIBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */; };
 		3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */; };
 		3FC674541F99614600E2A352 /* RhythmsDownStem.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */; };
@@ -33,6 +30,8 @@
 		3FC674571F99614600E2A352 /* Rhyth.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC674521F99614600E2A352 /* Rhyth.otf */; };
 		3FC674591F997FB600E2A352 /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC674581F997FB600E2A352 /* CellTableViewCell.swift */; };
 		3FC6745B1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */; };
+		3FFFB6DC1FB225E600F7D73B /* GeneralUser GS MuseScore v1.442.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFB6DA1FB225E500F7D73B /* GeneralUser GS MuseScore v1.442.sf2 */; };
+		3FFFB6DD1FB225E600F7D73B /* sibeliusGMajor.mid in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFB6DB1FB225E600F7D73B /* sibeliusGMajor.mid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,8 +58,6 @@
 		1792969B1DF0EA3E00273528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		239AF1AF1FAB60150074CFDA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		239AF1B11FAB61CD0074CFDA /* Midi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Midi.swift; sourceTree = "<group>"; };
-		239AF1B61FAB64310074CFDA /* sibeliusGMajor.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = sibeliusGMajor.mid; sourceTree = "<group>"; };
-		239AF1B91FAC9E2D0074CFDA /* GeneralUser GS MuseScore v1.442.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GeneralUser GS MuseScore v1.442.sf2"; path = "../../midiPlayer/midiPlayer/GeneralUser GS MuseScore v1.442.sf2"; sourceTree = "<group>"; };
 		3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		3F1F0C5A1F9A4811006A7EED /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		3F5FBDB11FA12DFD00D873DF /* RhythmPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhythmPopupController.swift; sourceTree = "<group>"; };
@@ -68,7 +65,6 @@
 		3F7A893C1F910F8B00E6AF2E /* ChordSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordSelectViewController.swift; sourceTree = "<group>"; };
 		3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleChordLogic.swift; sourceTree = "<group>"; };
 		3FB462FA1FA37B3C0092DBA7 /* Rhythm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rhythm.swift; sourceTree = "<group>"; };
-		3FB462FC1FA37B930092DBA7 /* QuarterNotes.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = QuarterNotes.mid; path = YesNote/QuarterNotes.mid; sourceTree = "<group>"; };
 		3FC3C4721F9FA38900E3262D /* UIBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderButton.swift; sourceTree = "<group>"; };
 		3FC6744E1F99614600E2A352 /* StaffClefPitchesEasy.suit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StaffClefPitchesEasy.suit; sourceTree = "<group>"; };
 		3FC6744F1F99614600E2A352 /* RhythmsDownStem.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhythmsDownStem.otf; sourceTree = "<group>"; };
@@ -77,6 +73,8 @@
 		3FC674521F99614600E2A352 /* Rhyth.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyth.otf; sourceTree = "<group>"; };
 		3FC674581F997FB600E2A352 /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
 		3FC6745A1F99AC1C00E2A352 /* DroneNoteAndMuteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneNoteAndMuteButton.swift; sourceTree = "<group>"; };
+		3FFFB6DA1FB225E500F7D73B /* GeneralUser GS MuseScore v1.442.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GeneralUser GS MuseScore v1.442.sf2"; path = "YesNote/Rhythms/GeneralUser GS MuseScore v1.442.sf2"; sourceTree = "<group>"; };
+		3FFFB6DB1FB225E600F7D73B /* sibeliusGMajor.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = sibeliusGMajor.mid; path = YesNote/Rhythms/sibeliusGMajor.mid; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +92,9 @@
 		179296831DF0EA3D00273528 = {
 			isa = PBXGroup;
 			children = (
+				3FFFB6DA1FB225E500F7D73B /* GeneralUser GS MuseScore v1.442.sf2 */,
+				3FFFB6DB1FB225E600F7D73B /* sibeliusGMajor.mid */,
 				239AF1AF1FAB60150074CFDA /* README.md */,
-				3FB462FC1FA37B930092DBA7 /* QuarterNotes.mid */,
 				3F1F0C561F9A3A5E006A7EED /* AudioKit.framework */,
 				1792968E1DF0EA3E00273528 /* YesNote */,
 				1792968D1DF0EA3E00273528 /* Products */,
@@ -115,8 +114,6 @@
 			children = (
 				1792968F1DF0EA3E00273528 /* AppDelegate.swift */,
 				179296911DF0EA3E00273528 /* MainViewController.swift */,
-				239AF1B61FAB64310074CFDA /* sibeliusGMajor.mid */,
-				239AF1B91FAC9E2D0074CFDA /* GeneralUser GS MuseScore v1.442.sf2 */,
 				3FAAF07A1FA29B0700794A2F /* ScaleChordLogic.swift */,
 				3FB462FA1FA37B3C0092DBA7 /* Rhythm.swift */,
 				239AF1B11FAB61CD0074CFDA /* Midi.swift */,
@@ -210,14 +207,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				239AF1BA1FAC9E2D0074CFDA /* GeneralUser GS MuseScore v1.442.sf2 in Resources */,
-				3FB462FD1FA37B930092DBA7 /* QuarterNotes.mid in Resources */,
+				3FFFB6DC1FB225E600F7D73B /* GeneralUser GS MuseScore v1.442.sf2 in Resources */,
+				3FFFB6DD1FB225E600F7D73B /* sibeliusGMajor.mid in Resources */,
 				3FC674531F99614600E2A352 /* StaffClefPitchesEasy.suit in Resources */,
 				239AF1B01FAB60150074CFDA /* README.md in Resources */,
 				3FC674551F99614600E2A352 /* STAFCP__.TTF in Resources */,
 				3FC674561F99614600E2A352 /* STAFCPE_.TTF in Resources */,
 				3FC674541F99614600E2A352 /* RhythmsDownStem.otf in Resources */,
-				239AF1B71FAB64310074CFDA /* sibeliusGMajor.mid in Resources */,
 				1792969A1DF0EA3E00273528 /* LaunchScreen.storyboard in Resources */,
 				179296971DF0EA3E00273528 /* Assets.xcassets in Resources */,
 				179296951DF0EA3E00273528 /* Main.storyboard in Resources */,
