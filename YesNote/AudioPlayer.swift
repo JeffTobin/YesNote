@@ -47,14 +47,22 @@ class AudioPlayer {
         //begin midi
         myMidiPlayer.musicSequence = myMidiPlayer.createMusicSequence()
         myMidiPlayer.createAVMIDIPlayer((myMidiPlayer.musicSequence)!)
-        myMidiPlayer.createAVMIDIPlayerFromMIDIFIle()
         myMidiPlayer.musicPlayer = myMidiPlayer.createMusicPlayer((myMidiPlayer.musicSequence)!)
         //end midi
     }
     
     func changeVolume(index: Int, volume: Float) {      //change volume
-        if index == 0 {
-            //change rhythm volume here
+        if index == 0 && playing == true {
+            //change rhythm volume
+            if volume == 0 {
+                myMidiPlayer.loop = false
+                myMidiPlayer.midiPlayer?.stop()
+            }
+            else {
+                if playing == true {
+                    myMidiPlayer.playMidi()
+                }
+            }
         }
         else {
             oscillators[index - 1]?.amplitude = Double(volume)
@@ -67,7 +75,8 @@ class AudioPlayer {
             for osc in oscillators {
                 osc.value.stop()
             }
-            myMidiPlayer.playMidi()
+            myMidiPlayer.loop = false
+            myMidiPlayer.midiPlayer?.stop()
             playing = false
         }
         else if chord.count != 0 {
@@ -78,7 +87,6 @@ class AudioPlayer {
             }
             playing = true
             myMidiPlayer.tempoConverted = tempo/(myMidiPlayer.tempoDivider)
-            myMidiPlayer.playMidi()
         }
         else {
                                                        //nothing to see here just a bug fix

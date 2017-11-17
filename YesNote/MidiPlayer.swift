@@ -28,11 +28,11 @@ class MidiPlayer {
     var musicSequence:MusicSequence!
     //end Jeff's Midi Player
     //this one is from a midi file
-    
-    
-    
     //begin midi
     func createAVMIDIPlayer(_ musicSequence:MusicSequence) {
+        
+       
+        
         
         guard let bankURL = Bundle.main.url(forResource: "GeneralUser GS MuseScore v1.442", withExtension: "sf2") else {
             fatalError("\"GeneralUser GS MuseScore v1.442.sf2\" file not found.")
@@ -65,6 +65,7 @@ class MidiPlayer {
     }
     
     func playMidi() {
+        createAVMIDIPlayerFromMIDIFIle()
         self.midiPlayer?.setValue(tempoConverted, forKey: "rate")
         loop = !loop
         if (self.midiPlayer?.isPlaying)! {
@@ -93,8 +94,11 @@ class MidiPlayer {
     
     func createAVMIDIPlayerFromMIDIFIle() {
         
-        guard let midiFileURL = Bundle.main.url(forResource: "sibeliusGMajor", withExtension: "mid") else {
-            fatalError("\"sibeliusGMajor.mid\" file not found.")
+        let mainVC = UIApplication.shared.keyWindow?.rootViewController as! MainViewController?
+        let midiFileName = mainVC?.rhythmObj.getMIDIName()
+        
+        guard let midiFileURL = Bundle.main.url(forResource: midiFileName, withExtension: "mid") else {
+            fatalError("\"\(String(describing: midiFileName))\" file not found.")
         }
         guard let bankURL = Bundle.main.url(forResource: "GeneralUser GS MuseScore v1.442", withExtension: "sf2") else {
             fatalError("\"GeneralUser GS MuseScore v1.442.sf2\" file not found.")

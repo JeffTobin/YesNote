@@ -33,6 +33,9 @@ class RhythmPopupController: UITableViewController {
         mainVC?.rhythmObj.setRhythm(rhythmChoice: indexPath.row)
         mainVC?.rhythmNotationLabel.text = mainVC?.rhythmObj.getRhythm().font
         
+        //pause drones
+        mainVC?.audioPlayer.togglePlay(tempo: 0.0, chord: [])
+        
         //dismiss popover on main thread
         DispatchQueue.main.async {
             self.dismiss(animated: true, completion: nil)
